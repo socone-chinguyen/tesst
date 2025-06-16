@@ -34,7 +34,7 @@ The following files are part of this distribution:
 
 This sections describes how to install the Vector SIL Kit Dashboard using the `apt` command.
 
-    $ apt install ./vector-sil-kit-dashboard-1.0.0-jammy_amd64.deb
+    $ apt install ./vector-sil-kit-dashboard_1.0.0-jammy_amd64.deb
 
 This will install the Vector SIL Kit Dashboard and register it as a service.
 
