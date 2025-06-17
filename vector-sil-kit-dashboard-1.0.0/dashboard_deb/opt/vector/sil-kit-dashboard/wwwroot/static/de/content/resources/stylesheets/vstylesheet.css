@@ -1,0 +1,2304 @@
+/*<meta />*/
+
+/*** CSS INCLUDE ***/
+
+@import url('syntaxhighlighting.css');
+
+@import url('tabswitch.css');
+
+@import url('mgui.css');
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+/***                       ***/
+/***   BASIC DEFINITIONS   ***/
+/***                       ***/
+
+body
+{
+	color: #3a3e3f;
+	font-family: verdana;
+	font-size: 10pt;
+}
+
+/**html
+{
+	mc-master-page: url('../MasterPages/vMasterPage.flmsp'); Is set in the project properties and in the target (General and Advanced)
+}**/
+
+/***                                       ***/
+/***   style for automatc structure path   ***/
+/***                                       ***/
+
+.vStructurePath MadCap|breadcrumbsProxy
+{
+	border-bottom-style: none;
+	mc-breadcrumbs-divider: ' » ';
+	mc-breadcrumbs-prefix: '';
+	mc-breadcrumbs-count: 10;
+	margin-bottom: 0px;
+	padding-left: 1px;
+	padding-bottom: 10px;
+	background-color: transparent;
+	font-size: 10pt;
+}
+
+.vStructurePath a
+{
+	color: #3a3e3f;
+	text-decoration: none;
+}
+
+.vStructurePath a:hover
+{
+	color: #3a3e3f;
+	text-decoration: underline;
+}
+
+.vStructurePath img
+{
+	float: left;
+	margin-right: 5px;
+}
+
+/***                                  ***/
+/***   style for navigation toolbar   ***/
+/***                                  ***/
+
+div.NavTop
+{
+	position: -webkit-sticky;
+	/* Safari */
+	position: sticky;
+	top: 0;
+	display: block;
+	height: 40px;
+}
+
+div.NavTop img
+{
+	float: right;
+	margin-left: 8px;
+	/** space between buttons**/
+}
+
+div.NavTopToolbar
+{
+	position: -webkit-sticky;
+	/* Safari */
+	position: sticky;
+	top: 0;
+	height: 40px;
+}
+
+div.NavTopToolbar .buttons._Skins_NavTopicToolbar.mc-component
+{
+	float: right;
+	margin-right: -4px;
+}
+
+/***                        ***/
+/***   cookie settings   	***/
+/***                        ***/
+
+.cookie-link-button
+{
+	font-family: Verdana !important;
+	color: #ffffff !important;
+	font-size: 10pt !important;
+	font-weight: normal !important;
+	border: 0 !important;
+	padding: 0 !important;
+	text-decoration: none !important;
+}
+
+.cookie-link-button:hover
+{
+	text-decoration: underline !important;
+	background-color: #b70032 !important;
+}
+
+/***                           ***/
+/***   style for site layout   ***/
+/***                           ***/
+
+div.Body
+{
+	/*padding-top: 7em;*/
+	padding-bottom: 7em;
+}
+
+div.Footer
+{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #b70032;
+}
+
+div.FooterWhite
+{
+	background-color: #ffffff;
+	padding-bottom: 0px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+table.FooterWhite
+{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	border-spacing: 3px 0px;
+}
+
+MadCap|topicToolbarProxy.Footer
+{
+	padding-top: 0px;
+	padding-bottom: 3px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-left: 0px;
+	background-color: #ffffff;
+	color: #909090;
+	mc-topic-toolbar-items: ExpandAll CollapseAll RemoveHighlight;
+}
+
+/* div.Header - for test with fixed header only
+{
+  position: fixed;
+  width: 1000px;
+  top: 100px;
+  padding-top: 20px;  // padding = distance inside
+  margin-top: 0px;
+  margin-bottom: 0px; // margin = distance outside
+  left: 0;
+  right: 0;
+  background-color: #FFFFFF;
+  alignment: center;
+}
+*/
+
+/***                         ***/
+/***   GENERAL DEFINITIONS   ***/
+/***                         ***/
+
+div.Indent
+{
+	margin-left: 25pt;
+}
+
+div.IndentIndent
+{
+	margin-left: 43pt;
+}
+
+div.ListSnippet
+{
+	margin-left: 15pt;
+}
+
+div.Procedure
+{
+	margin-left: 5pt;
+	mc-disabled: false;
+}
+
+div.TogglerFrame
+{
+	border: solid 2px #028FC3;
+	padding: 5px;
+}
+
+hr
+{
+	border-bottom-color: #028FC3;
+}
+
+hr.Startpage
+{
+	color: #b70032;
+	border-bottom-color: #b70032;
+	border-bottom-style: solid;
+	border-bottom-width: 0.5px;
+	border-top-color: #b70032;
+	border-top-style: solid;
+	border-top-width: 0.5px;
+}
+
+hr.Tab
+{
+	display: block;
+	margin-top: 0em;
+	margin-bottom: 2em;
+	margin-left: 2px;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	border-top-style: solid;
+	border-top-color: #028FC3;
+}
+
+img
+{
+	border: none;
+}
+
+p.ToolAvailability
+{
+	color: #b70032;
+	margin-top: -25px;
+	margin-bottom: 30px;
+}
+
+sub
+{
+	mc-disabled: false;
+}
+
+sup
+{
+	mc-disabled: false;
+}
+
+/***                      ***/
+/***   LIST DEFINITIONS   ***/
+/***                      ***/
+
+ol,
+ul
+{
+	padding-left: 25pt;
+	margin: 0pt;
+	margin-top: 0px;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+}
+
+ol
+{
+	list-style-type: decimal;
+}
+
+ul
+{
+	list-style-type: disc;
+	list-style-image: url('../vimages/vbackstage/vlistitem.png');
+}
+
+li
+{
+	display: list-item;
+	margin-bottom: 3pt;
+}
+
+li.Bold
+{
+	font-weight: bold;
+}
+
+li.Indent
+{
+	margin-left: 15pt;
+}
+
+li.IndentBold
+{
+	font-weight: bold;
+	margin-left: 15pt;
+}
+
+li.IndentIndent
+{
+	margin-left: 40px;
+}
+
+li.IndentIndentBold
+{
+	font-weight: bold;
+	margin-left: 40px;
+}
+
+li.IndentIndentIndent
+{
+	margin-left: 60px;
+}
+
+li.ComfortWhite
+{
+	padding-top: 3px;
+	padding-bottom: 4px;
+	color: #ffffff;
+	list-style-type: disc;
+	list-style-image: url('../vimages/vbackstage/vlistitemwhite.png');
+}
+
+/***                       ***/
+/***   TABLE DEFINITIONS   ***/
+/***                       ***/
+
+table
+{
+	margin-bottom: 15px;
+}
+
+th
+{
+	font-weight: bold;
+	color: #b70032;
+	background-color: #dadee1;
+	vertical-align: top;
+	text-align: left;
+	padding: 5pt;
+	padding-bottom: 5pt;
+}
+
+td
+{
+	display: table-cell;
+	vertical-align: top;
+	padding: 5pt;
+	padding-top: 5pt;
+	padding-bottom: 0pt;
+}
+
+/***                       ***/
+/***   PARAGRAPHS          ***/
+/***                       ***/
+
+p
+{
+	display: block;
+	margin: 0pt;
+	margin-bottom: 9pt;
+	margin-top: 0pt;
+	margin-right: 0pt;
+}
+
+p.AutoSearchFilterConcepts
+{
+	margin-bottom: 0pt;
+}
+
+p.Availability
+{
+	font-size: 8pt;
+	padding: 0px;
+	margin-bottom: 0pt;
+}
+
+p.Blue
+{
+	color: #028fc3;
+}
+
+p.Bold
+{
+	font-weight: bold;
+}
+
+p.BoldBlue
+{
+	color: #000000;
+	font-weight: bold;
+}
+
+p.vec_BuildInfo
+{
+	font-size: 8pt;
+	padding-top: 0px;
+	padding-bottom: 1px;
+	padding-right: 3px;
+	color: #909090;
+	background-color: #ffffff;
+	margin-bottom: 0pt;
+	margin-left: -3px;
+}
+
+p.vec_Footer
+{
+	color: #ffffff;
+	margin-left: 0px;
+	margin-bottom: 2px;
+	margin-top: 2px;
+}
+
+p.vec_FooterBold
+{
+	color: #ffffff;
+	font-weight: bold;
+	margin-left: -5px;
+	margin-bottom: 2px;
+	margin-top: 2px;
+}
+
+p.Green
+{
+	color: #00a765;
+}
+
+p.Header
+{
+	font-size: 8pt;
+	color: #909090;
+	text-align: center;
+	margin-bottom: 0pt;
+}
+
+p.IndexConcept
+{
+	margin-bottom: 0pt;
+}
+
+p.Headline
+{
+	font-weight: bold;
+	margin: 0pt;
+	padding-bottom: 6pt;
+	padding-top: 12pt;
+}
+
+p.vec_imprint
+{
+	
+}
+
+p.LinkList
+{
+	margin-bottom: 1em;
+	margin-top: 4em;
+	padding-top: 2px;
+	color: #b70032;
+	background-color: #ffffff;
+	padding-bottom: 5px;
+}
+
+p.ListItem
+{
+	margin-bottom: 3pt;
+}
+
+p.MenuPath
+{
+	font-style: normal;
+	padding-bottom: 2px;
+	padding-top: 5px;
+	border-bottom-width: 5px;
+	border-bottom: solid 5px #bebebe;
+	margin-bottom: 30px;
+}
+
+p.Result
+{
+	margin-left: 25pt;
+}
+
+p.ResultIndent
+{
+	margin-left: 43pt;
+}
+
+p.Small
+{
+	font-size: 8pt;
+}
+
+p.SourceCode
+{
+	font-family: 'Courier New';
+	background-color: #dadee1;
+}
+
+p.SourceCodeIndent
+{
+	font-family: 'Courier New';
+	background-color: #dadee1;
+	margin-left: 25pt;
+}
+
+p.StartList	/*p before a list/enumeration starts (makes it obviously that they belong together)*/
+{
+	margin-bottom: 3pt;
+}
+
+p.StructurePath
+{
+	margin-bottom: 0px;
+	padding-left: 1px;
+	padding-bottom: 10px;
+	background-color: transparent;
+	font-size: 10pt;
+}
+
+p.Syntax
+{
+	font-family: 'Courier New';
+	padding-top: 1pt;
+}
+
+p.SyntaxIndent
+{
+	font-family: 'Courier New';
+	padding-top: 1pt;
+	margin-left: 25pt;
+}
+
+p.Table
+{
+	margin-bottom: 3pt;
+}
+
+p.TableBeforeInfoblock	/*p.Table with bigger space to following info block*/
+{
+	display: block;
+	margin: 0pt;
+	margin-bottom: 9pt;
+	margin-top: 0pt;
+	margin-right: 0pt;
+}
+
+p.TableBold
+{
+	font-weight: bold;
+	margin-bottom: 3pt;
+}
+
+p.TableBoldWhite
+{
+	font-weight: bold;
+	margin-bottom: 3pt;
+	color: #FFFFFF;
+}
+
+p.TableCOM
+{
+	font-size: 8pt;
+	color: #909090;
+	margin-bottom: 0pt;
+}
+
+p.vec_TR
+{
+	font-size: 8pt;
+	color: #909090;
+	margin-bottom: 0pt;
+}
+
+p.TableGUI
+{
+	font-weight: bold;
+	margin-bottom: 3pt;
+}
+
+p.TableHead
+{
+	font-weight: bold;
+	margin-bottom: 3pt;
+}
+
+p.TableHeadSmall
+{
+	font-size: 8pt;
+	font-weight: bold;
+	color: #b70032;
+	background-color: #dcdcdc;
+	margin-bottom: 3pt;
+}
+
+p.TableKeyboard
+{
+	font-weight: bold;
+	margin-bottom: 3pt;
+}
+
+p.TableSourceCode
+{
+	font-family: 'Courier New';
+	background-color: #dadee1;
+	margin-bottom: 3pt;
+}
+
+p.TableSourceCodeIndent
+{
+	font-family: 'Courier New';
+	background-color: #dadee1;
+	margin-left: 25pt;
+	margin-bottom: 3pt;
+}
+
+p.TableSymbolHead
+{
+	font-weight: bold;
+}
+
+p.TableWhatsNewHead
+{
+	font-weight: bold;
+	color: #00A765;
+}
+
+p.TableSymbolHeadRed
+{
+	font-weight: bold;
+	color: #b70032;
+}
+
+p.TableSymbolHeadRedWhite
+{
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #b70032;
+}
+
+p.TableSyntax
+{
+	font-family: 'Courier New';
+	padding-top: 1pt;
+	margin-bottom: 3pt;
+}
+
+p.TableSyntaxIndent
+{
+	font-family: 'Courier New';
+	padding-top: 1pt;
+	margin-bottom: 3pt;
+	margin-left: 25pt;
+}
+
+p.TableTextSmall
+{
+	font-size: 8pt;
+	margin-bottom: 3pt;
+}
+
+p.TableTextSmallBold
+{
+	font-size: 8pt;
+	margin-bottom: 3pt;
+	font-weight: bold;
+}
+
+p.White
+{
+	color: #ffffff;
+}
+
+/*** p and a for PageTOC ***/
+
+p.PageTOC
+{
+	color: #565c5e;
+	background-color: #F0F5F5;
+	margin-bottom: 0pt;
+	margin-top: 3pt;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+p.PageTOCResult
+{
+	color: #565c5e;
+	background-color: #F0F5F5;
+	margin-bottom: 0pt;
+	margin-top: 0pt;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 25pt;
+	padding-right: 5px;
+	margin-left: 0pt;
+}
+
+a.PageTOC
+{
+	text-decoration: none;
+	color: #565c5e;
+}
+
+a.PageTOC:link
+{
+	color: #565c5e;
+}
+
+a.PageTOC:visited
+{
+	text-decoration: none;
+	color: #565c5e;
+}
+
+a.PageTOC:hover
+{
+	text-decoration: underline;
+	color: #565c5e;
+}
+
+/***                       ***/
+/***   HEADLINES           ***/
+/***                       ***/
+
+h
+{
+	font-weight: bold;
+	margin: 0pt;
+}
+
+h1
+{
+	margin: 0px;
+	padding-left: 1px;
+	margin-top: 0px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	color: #b70032;
+	font-size: 18pt;
+	background-color: transparent;
+	margin-bottom: 3px;
+	font-weight: normal;
+}
+
+h1.obsolete
+{
+	color: #3a3e3f;
+}
+
+h2
+{
+	font-size: 10pt;
+	margin-top: 14pt;
+	margin-bottom: 10pt;
+}
+
+h2.CommandPage
+{
+	color: #b70032;
+	background-color: #dadee1;
+	padding-top: 3px;
+	padding-left: 1px;
+	padding-bottom: 3px;
+	margin-top: 18pt;
+	margin-bottom: 10pt;
+}
+
+h2.GroupBox
+{
+	border-bottom: solid;
+	border-bottom-color: #B1B6BA;
+	border-bottom-width: 1px;
+}
+
+h2.ModulInfo
+{
+	color: #b70032;
+	border-bottom-color: #b70032;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+}
+
+h2.NavigationXS
+{
+	background: vNavigationXS;
+	background-image: url('../vimages/vnavigationxs.png');
+	background-repeat: no-repeat;
+	background-attachment: inherit;
+	padding: 2pt;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #028FC3;
+}
+
+h2.NavigationS
+{
+	background: vNavigationS;
+	background-image: url('../vimages/vnavigations.png');
+	background-repeat: no-repeat;
+	background-attachment: inherit;
+	padding: 2pt;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #028FC3;
+}
+
+h2.NavigationM
+{
+	background: vNavigationM;
+	background-image: url('../vimages/vnavigationm.png');
+	background-repeat: no-repeat;
+	background-attachment: inherit;
+	padding: 2pt;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #028FC3;
+}
+
+h2.NavigationL
+{
+	background: vNavigationL;
+	background-image: url('../vimages/vnavigationl.png');
+	background-repeat: no-repeat;
+	background-attachment: inherit;
+	padding: 2pt;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #028FC3;
+}
+
+h2.NavigationXL
+{
+	background: vNavigationXL;
+	background-image: url('../vimages/vnavigationxl.png');
+	background-repeat: no-repeat;
+	background-attachment: inherit;
+	padding: 2pt;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #028FC3;
+}
+
+h2.SectionMain
+{
+	color: #b70032;
+	background-color: #dadee1;
+	padding-top: 3px;
+	padding-left: 1px;
+	padding-bottom: 3px;
+	margin-top: 18pt;
+	margin-bottom: 10pt;
+}
+
+h2.SectionSub
+{
+	color: #b70032;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	padding-top: 3px;
+	padding-left: 1px;
+	padding-bottom: 3px;
+	margin-top: 18pt;
+	margin-bottom: 10pt;
+	border-bottom-color: #565C5E;
+}
+
+h3
+{
+	font-size: 10pt;
+	margin: 0pt;
+	margin-bottom: 9pt;
+}
+
+h3.CommandPage
+{
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #dadee1;
+}
+
+h3.GroupBox
+{
+	border-bottom: solid;
+	border-bottom-color: #B1B6BA;
+	border-bottom-width: 1px;
+}
+
+h3.SectionMain
+{
+	color: #b70032;
+	background-color: #dadee1;
+	padding-top: 3px;
+	padding-left: 1px;
+	padding-bottom: 3px;
+	margin-bottom: 10pt;
+}
+
+h3.SectionSub
+{
+	color: #b70032;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #565C5E;
+}
+
+/***                       ***/
+/***   HYPERLINKS          ***/
+/***                       ***/
+
+a
+{
+	color: #3a3e3f;
+	text-decoration: underline;
+}
+
+a:link
+{
+	color: #3a3e3f;
+}
+
+a:visited
+{
+	color: #3a3e3f;
+}
+
+a:focus
+{
+	
+}
+
+a:hover
+{
+	color: #b70032;
+}
+
+a.blue
+{
+	color: #b70032;
+}
+
+a.blue:link
+{
+	
+}
+
+a.blue:visited
+{
+	
+}
+
+a.blue:focus
+{
+	
+}
+
+a.blue:hover
+{
+	color: #b70032;
+}
+
+a.bold
+{
+	font-weight: bold;
+}
+
+a.bold:link
+{
+	color: #3a3e3f;
+}
+
+a.bold:visited
+{
+	color: #3a3e3f;
+}
+
+a.bold:focus
+{
+	
+}
+
+a.bold:hover
+{
+	color: #b70032;
+}
+
+a.ExecuteLink
+{
+	color: #028FC3;
+}
+
+a.ExecuteLink:link
+{
+	color: #028FC3;
+}
+
+a.ExecuteLink:visited
+{
+	color: #028FC3;
+}
+
+a.ExecuteLink:focus
+{
+	
+}
+
+a.ExecuteLink:hover
+{
+	color: #b70032;
+}
+
+a.ExpandingBody
+{
+	color: #909090;
+}
+
+a.ExpandingBody:link
+{
+	color: #909090;
+}
+
+a.ExpandingBody:visited
+{
+	color: #909090;
+}
+
+a.ExpandingBody:focus
+{
+	
+}
+
+a.ExpandingBody:hover
+{
+	color: #b70032;
+}
+
+a.ExternalLink
+{
+	color: #028FC3;
+}
+
+a.ExternalLink:hover
+{
+	color: #b70032;
+}
+
+a.vec_Footer
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a.vec_Footer:link
+{
+	
+}
+
+a.vec_Footer:visited
+{
+	
+}
+
+a.vec_Footer:focus
+{
+	
+}
+
+a.vec_Footer:hover
+{
+	text-decoration: underline;
+}
+
+a.Glossary
+{
+	background-color: #DADEE1;
+}
+
+a.GUI
+{
+	font-weight: bold;
+}
+
+a.GUI:hover
+{
+	color: #b70032;
+}
+
+a.H2SectionMain
+{
+	text-decoration: none;
+	color: #b70032;
+}
+
+a.H2SectionMain:hover
+{
+	text-decoration: underline;
+}
+
+a.H2SectionSub
+{
+	text-decoration: none;
+	color: #b70032;
+}
+
+a.H2SectionSub:hover
+{
+	text-decoration: underline;
+}
+
+a.LinkList
+{
+	text-decoration: underline;
+	color: #b70032;
+}
+
+a.LinkList:link
+{
+	
+}
+
+a.LinkList:visited
+{
+	
+}
+
+a.LinkList:focus
+{
+	
+}
+
+a.LinkList:hover
+{
+	
+}
+
+a.ListWhite
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a.ListWhite:link
+{
+	
+}
+
+a.ListWhite:visited
+{
+	
+}
+
+a.ListWhite:focus
+{
+	
+}
+
+a.ListWhite:hover
+{
+	text-decoration: underline;
+}
+
+a.MenuPath
+{
+	color: #3a3e3f;
+	text-decoration: none;
+}
+
+a.MenuPath:link
+{
+	
+}
+
+a.MenuPath:visited
+{
+	
+}
+
+a.MenuPath:focus
+{
+	
+}
+
+a.MenuPath:hover
+{
+	text-decoration: underline;
+}
+
+a.Popup
+{
+	text-decoration: underline;
+}
+
+a.Popup:link
+{
+	text-decoration: underline;
+}
+
+a.Popup:visited
+{
+	text-decoration: underline;
+}
+
+a.Popup:focus
+{
+	text-decoration: none;
+}
+
+a.Popup:hover
+{
+	color: #b70032;
+}
+
+a.Product
+{
+	
+}
+
+a.Product:link
+{
+	
+}
+
+a.Product:visited
+{
+	
+}
+
+a.Product:focus
+{
+	
+}
+
+a.Product:hover
+{
+	color: #b70032;
+}
+
+a.red
+{
+	color: #b70032;
+}
+
+a.red:link
+{
+	
+}
+
+a.red:visited
+{
+	
+}
+
+a.red:focus
+{
+	
+}
+
+a.red:hover
+{
+	color: #b70032;
+}
+
+a.Small
+{
+	font-size: 8pt;
+}
+
+a.SourceCode
+{
+	font-family: 'Courier New';
+}
+
+a.SourceCode:link
+{
+	
+}
+
+a.SourceCode:visited
+{
+	
+}
+
+a.SourceCode:focus
+{
+	
+}
+
+a.SourceCode:hover
+{
+	color: #b70032;
+}
+
+a.StructurePath
+{
+	color: #3a3e3f;
+	text-decoration: none;
+}
+
+a.StructurePath:link
+{
+	
+}
+
+a.StructurePath:visited
+{
+	
+}
+
+a.StructurePath:focus
+{
+	
+}
+
+a.StructurePath:hover
+{
+	text-decoration: underline;
+}
+
+a.Tab
+{
+	font-size: 8pt;
+	text-decoration: none;
+	color: #909090;
+}
+
+a.Tab:hover
+{
+	text-decoration: underline;
+}
+
+a.TopOfPage
+{
+	font-size: 8pt;
+	text-decoration: none;
+}
+
+a.TopOfPageWhite
+{
+	font-size: 8pt;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a.White
+{
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.White:link
+{
+	
+}
+
+a.White:visited
+{
+	
+}
+
+a.White:focus
+{
+	
+}
+
+a.White:hover
+{
+	text-decoration: underline;
+}
+
+/***                       ***/
+/***   SPAN CLASSES        ***/
+/***                       ***/
+
+span.blue
+{
+	color: #028fc3;
+}
+
+span.bold
+{
+	font-weight: bold;
+}
+
+span.CodeKeyword
+{
+	color: #0000ff;
+	font-family: 'Courier New';
+}
+
+span.CodeDataType
+{
+	color: #00008b;
+	font-family: 'Courier New';
+}
+
+span.CodeStringLiteral
+{
+	color: #800040;
+	font-family: 'Courier New';
+}
+
+span.CodeNumericalLiteral
+{
+	color: #ff9560;
+	font-family: 'Courier New';
+}
+
+span.CodeCOM
+{
+	color: #7D1E7D;
+	font-family: 'Courier New';
+}
+
+span.CodeComment
+{
+	color: #199C64;
+	font-family: 'Courier New';
+}
+
+span.CodeAttributeKey_Namespace
+{
+	color: #a9a9a9;
+	font-family: 'Courier New';
+	font-style: italic;
+}
+
+span.CodeFormulaVariable
+{
+	color: #804000;
+	font-family: 'Courier New';
+	font-style: italic;
+}
+
+span.CodeField
+{
+	font-family: 'Courier New';
+	background-color: #dadee1;
+}
+
+span.green
+{
+	color: #00a765;
+}
+
+span.GUI
+{
+	font-weight: bold;
+}
+
+span.Highlight
+{
+	color: #028fc3;
+}
+
+span.Keyboard
+{
+	font-weight: bold;
+}
+
+span.Keyword
+{
+	background-color: #F0F5F5;
+	/**background-color: #DADEE1;**/
+	border: solid 1px #DADEE1;
+	padding-left: 2px;
+	padding-right: 2px;
+	border-radius: 2px;
+	font-weight: bold;
+}
+
+span.Product
+{
+	/*	color: #b70032;   */
+}
+
+span.SearchHighlight
+{
+	background-color: #ffff00;
+}
+
+span.red
+{
+	color: #b70032;
+}
+
+span.small
+{
+	font-size: 8pt;
+}
+
+span.SourceCode
+{
+	font-family: 'Courier New';
+}
+
+span.Variant
+{
+	font-weight: normal;
+	color: #EF7C00;
+}
+
+span.yellow
+{
+	color: #fbb900;
+}
+
+/***                          ***/
+/***   HTML5-RELATED STYLES   ***/
+/***                          ***/
+
+.link-list-popup
+{
+	background-color: #f0f5f5;
+	border: 1px solid #565c5e;
+	border-radius: 0px;
+	box-shadow: none;
+	color: #565c5e;
+}
+
+.link-list-popup > ul > li:hover
+{
+	background-color: #dadee1;
+	color: #565c5e;
+}
+
+.link-list-popup ul li a
+{
+	color: #565c5e;
+}
+
+/***                       ***/
+/***   Tool Availability   ***/
+/***                       ***/
+/* Open and Close Icons */
+
+MadCap|expanding.ToolAvailability
+{
+	mc-closed-image: url('../vimages/vexpandtoolavailabilityclose.png');
+	mc-open-image: url('../vimages/vexpandtoolavailabilityopen.png');
+}
+
+/* Expanding Hotspot */
+
+.MCExpandingHotSpot_.MCHotSpotImage.MCExpandingHotSpot_ToolAvailability + .expandingBody
+{
+	padding-left: 3px;
+	color: #B1B6BA;
+	font-style: normal;
+}
+
+MadCap|expanding.ToolAvailability MadCap|expandingBody
+{
+	color: #B1B6BA;
+	font-style: normal;
+}
+
+/* Expanding Text */
+
+.MCExpandingHotSpot_.MCHotSpotImage.MCExpandingHotSpot_ToolAvailability
+{
+	color: #000000;
+	font-style: normal;
+}
+
+MadCap|expanding.ToolAvailability MadCap|expandingHead
+{
+	color: #000000;
+	font-style: normal;
+}
+
+.MCExpanding_Open a
+{
+	border: 1px solid #DADEE1;
+}
+
+/***                       ***/
+/***   MADCAP STYLES       ***/
+/***                       ***/
+
+MadCap|bodyProxy
+{
+	
+}
+
+MadCap|codeSnippet
+{
+	margin-bottom: 9pt;
+}
+
+MadCap|codeSnippetBody
+{
+	font-size: 11pt;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	line-height: 1.2em;
+	background-color: #dadee1;
+}
+
+MadCap|codeSnippetCaption
+{
+	font-size: 10pt;
+	font-family: 'Verdana';
+	text-decoration: none;
+	margin-bottom: 9pt;
+}
+
+MadCap|codeSnippetCopyButton
+{
+	font-size: 10pt;
+	font-family: 'Verdana';
+}
+
+MadCap|conceptLink
+{
+	mc-image: url('../vimages/vconceptlink.png');
+	color: #b70032;
+	font-size: 8pt;
+	text-decoration: none;
+	mc-image-spacing: 5px;
+	mc-image-position: left;
+	font-weight: normal;
+	mc-label: 'See Also';
+}
+
+MadCap|dropDown
+{
+	mc-closed-image: url('../vimages/vexpandclose.png');
+	mc-open-image: url('../vimages/vexpandopen.png');
+}
+
+MadCap|dropDown.ImageMagnifier
+{
+	mc-image-spacing: 5px;
+	mc-open-image-alt-text: Zoom to 100%;
+	mc-closed-image-alt-text: Close;
+	mc-image-position: right;
+	mc-closed-image: url('../vimages/vbackstage/vzoom100.png');
+	mc-open-image: url('../vimages/vbackstage/vzoom100.png');
+}
+
+MadCap|dropDownHead
+{
+	margin-bottom: 5pt;
+}
+
+MadCap|dropDownBody.Frame
+{
+	border: solid 2px #028FC3;
+	padding: 5px;
+	margin-bottom: 5pt;
+}
+
+MadCap|dropDown.WN
+{
+	margin-bottom: 5px;
+	mc-closed-image: url('../vimages/vclosewhatsnew.png');
+	mc-open-image: url('../vimages/vopenwhatsnew.png');
+}
+
+MadCap|dropDownHotspot.WN
+{
+	cursor: hand;
+	padding-left: 2pt;
+	color: #00A765;
+	font-weight: bold;
+}
+
+MadCap|dropDownHotspot
+{
+	cursor: hand;
+	color: #b70032;
+	font-weight: bold;
+}
+
+MadCap|expanding
+{
+	mc-closed-image: url('../vimages/vexpandclose.png');
+	mc-open-image: url('../vimages/vexpandopen.png');
+}
+
+MadCap|expandingBody
+{
+	font-style: italic;
+	color: #909090;
+	font-size: 10pt;
+	font-family: Verdana;
+	font-weight: normal;
+}
+
+MadCap|expandingHead
+{
+	font-style: italic;
+	font-weight: normal;
+	cursor: hand;
+	text-decoration: none;
+	color: #b70032;
+}
+
+MadCap|expandingHead.BlackBoldUnderline
+{
+	font-style: normal;
+	font-weight: bold;
+	cursor: hand;
+	text-decoration: underline;
+	color: #000000;
+}
+
+MadCap|expandingHead.BlackUnderline
+{
+	font-style: normal;
+	cursor: hand;
+	text-decoration: underline;
+	color: #000000;
+}
+
+MadCap|glossaryTerm
+{
+	color: #b70032;
+	mc-image-position: right;
+	font-weight: normal;
+	mc-open-image: url('../vimages/vexpandopen.png');
+	mc-closed-image: url('../vimages/vexpandclose.png');
+}
+
+MadCap|glossaryTerm.Expanding
+{
+	color: #b70032;
+	text-decoration: none;
+	font-size: 10pt;
+	font-family: Verdana;
+	mc-open-image: url('../vimages/vexpandopen.png');
+	mc-closed-image: url('../vimages/vexpandclose.png');
+	font-weight: inherit;
+}
+
+MadCap|popupBody
+{
+	font-weight: normal;
+	border-bottom-color: #b70032;
+	border: solid 1px #b70032;
+	font-size: 10pt;
+	background-color: #ffffff;
+}
+
+MadCap|popupHead
+{
+	color: #b70032;
+	font-weight: normal;
+	text-decoration: none;
+	font-size: 8pt;
+}
+
+MadCap|relatedTopics
+{
+	mc-image: url('../vimages/vconceptlink.png');
+	color: #b70032;
+	font-size: 8pt;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+MadCap|relatedTopics:hover
+{
+	text-decoration: none;
+	font-weight: normal;
+}
+
+MadCap|shortcut
+{
+	color: #028FC3;
+	mc-image-spacing: -4px;
+	mc-image: url('../vimages/vexternallink.png');
+}
+
+MadCap|toggler
+{
+	color: #b70032;
+	font-weight: bold;
+	text-decoration: none;
+	mc-closed-image: url('../vimages/vexpandclose.png');
+	mc-open-image: url('../vimages/vexpandopen.png');
+}
+
+MadCap|toggler.ImageMagnifier
+{
+	mc-image-spacing: 5px;
+	mc-open-image-alt-text: Zoom to 100%;
+	mc-closed-image-alt-text: Close;
+	mc-image-position: right;
+	mc-closed-image: url('../vimages/vbackstage/vzoom100.png');
+	mc-open-image: url('../vimages/vbackstage/vzoom100.png');
+}
+
+MadCap|toggler.BlackUnderline
+{
+	color: #000000;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: underline;
+	mc-closed-image: url('../vimages/vexpandclose.png');
+	mc-open-image: url('../vimages/vexpandopen.png');
+}
+
+MadCap|toggler.BoldBlackUnderline
+{
+	color: #000000;
+	font-weight: bold;
+	font-style: normal;
+	text-decoration: underline;
+	mc-closed-image: url('../vimages/vexpandclose.png');
+	mc-open-image: url('../vimages/vexpandopen.png');
+}
+
+MadCap|toggler.H2SectionMain
+{
+	
+}
+
+MadCap|toggler.H2SectionSub
+{
+	
+}
+
+MadCap|toggler.RedItalic
+{
+	color: #b70032;
+	font-weight: normal;
+	font-style: italic;
+	text-decoration: none;
+	mc-closed-image: url('../vimages/vexpandclose.png');
+	mc-open-image: url('../vimages/vexpandopen.png');
+}
+
+MadCap|toggler.TogglerWhite
+{
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+	mc-closed-image: url('../vimages/vexpandclose.png');
+	mc-open-image: url('../vimages/vexpandopen.png');
+}
+
+MadCap|topicToolbarProxy
+{
+	margin: 0px;
+	padding: 0px;
+	vertical-align: bottom;
+}
+
+/***                                                   ***/
+/***   Cross References Styles Analog To Link Styles   ***/
+/***                                                   ***/
+
+MadCap|xref
+{
+	color: #3a3e3f;
+	mc-format: '{title}';
+	text-decoration: underline;
+}
+
+MadCap|xref:hover
+{
+	color: #b70032;
+}
+
+MadCap|xref.blue
+{
+	color: #b70032;
+}
+
+MadCap|xref.blue:hover
+{
+	color: #b70032;
+}
+
+MadCap|xref.Bold
+{
+	font-weight: bold;
+}
+
+MadCap|xref.Bold:hover
+{
+	color: #b70032;
+}
+
+MadCap|xref.ExecuteLink
+{
+	color: #028FC3;
+}
+
+MadCap|xref.ExecuteLink:hover
+{
+	color: #b70032;
+}
+
+MadCap|xref.ExternalLink
+{
+	color: #028FC3;
+}
+
+MadCap|xref.ExternalLink:hover
+{
+	color: #b70032;
+}
+
+MadCap|xref.vec_Footer
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+MadCap|xref.vec_Footer:link
+{
+	
+}
+
+MadCap|xref.vec_Footer:visited
+{
+	
+}
+
+MadCap|xref.vec_Footer:focus
+{
+	
+}
+
+MadCap|xref.vec_Footer:hover
+{
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+MadCap|xref.Glossary
+{
+	background-color: #dadee1;
+}
+
+MadCap|xref.GUI
+{
+	font-weight: bold;
+}
+
+MadCap|xref.GUI:hover
+{
+	color: #b70032;
+}
+
+MadCap|xref.H2SectionMain
+{
+	text-decoration: none;
+	color: #b70032;
+}
+
+MadCap|xref.H2SectionMain:hover
+{
+	text-decoration: underline;
+}
+
+MadCap|xref.H2SectionSub
+{
+	text-decoration: none;
+	color: #b70032;
+}
+
+MadCap|xref.H2SectionSub:hover
+{
+	text-decoration: underline;
+}
+
+MadCap|xref.LinkList
+{
+	text-decoration: underline;
+	color: #b70032;
+}
+
+MadCap|xref.LinkList:hover
+{
+	text-decoration: underline;
+	color: #b70032;
+}
+
+MadCap|xref.ListWhite
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+
+MadCap|xref.ListWhite:link
+{
+	color: #ffffff;
+}
+
+MadCap|xref.ListWhite:visited
+{
+	color: #ffffff;
+}
+
+MadCap|xref.ListWhite:focus
+{
+	
+}
+
+MadCap|xref.ListWhite:hover
+{
+	text-decoration: underline;
+}
+
+MadCap|xref.MenuPath
+{
+	color: #3a3e3f;
+	text-decoration: none;
+}
+
+MadCap|xref.MenuPath:hover
+{
+	text-decoration: underline;
+}
+
+MadCap|xref.Popup
+{
+	text-decoration: underline;
+}
+
+MadCap|xref.Popup:hover
+{
+	color: #b70032;
+}
+
+MadCap|xref.Product
+{
+	
+}
+
+MadCap|xref.red
+{
+	color: #b70032;
+}
+
+MadCap|xref.Small
+{
+	font-size: 8pt;
+}
+
+MadCap|xref.SourceCode
+{
+	font-family: 'Courier New';
+}
+
+MadCap|xref.SourceCode:hover
+{
+	color: #b70032;
+}
+
+MadCap|xref.StructurePath
+{
+	color: #3a3e3f;
+	text-decoration: none;
+}
+
+MadCap|xref.StructurePath:hover
+{
+	color: #3a3e3f;
+	text-decoration: underline;
+}
+
+MadCap|xref.Tab
+{
+	font-size: 8pt;
+	text-decoration: none;
+	color: #909090;
+}
+
+MadCap|xref.Tab:hover
+{
+	text-decoration: underline;
+}
+
+MadCap|xref.TopOfPage
+{
+	color: #909090;
+	font-size: 8pt;
+	text-decoration: none;
+}
+
+MadCap|xref.TopOfPageWhite
+{
+	color: #ffffff;
+	font-size: 8pt;
+	text-decoration: none;
+}
+
+MadCap|xref.White
+{
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+MadCap|xref.White:hover
+{
+	text-decoration: underline;
+}
+
+/***                           ***/
+/***   DISABLE UNUSED STYLES   ***/
+/***                           ***/
+
+abbr
+{
+	mc-disabled: true;
+}
+
+acronym
+{
+	mc-disabled: true;
+}
+
+address
+{
+	mc-disabled: true;
+}
+
+b
+{
+	mc-disabled: true;
+}
+
+big
+{
+	mc-disabled: true;
+}
+
+cite
+{
+	mc-disabled: true;
+}
+
+code
+{
+	mc-disabled: true;
+}
+
+del
+{
+	mc-disabled: true;
+}
+
+em
+{
+	mc-disabled: true;
+}
+
+fieldset
+{
+	mc-disabled: true;
+}
+
+h4
+{
+	mc-disabled: true;
+}
+
+h5
+{
+	mc-disabled: true;
+}
+
+h6
+{
+	mc-disabled: true;
+}
+
+html.concept
+{
+	mc-disabled: true;
+}
+
+html.reference
+{
+	mc-disabled: true;
+}
+
+html.task
+{
+	mc-disabled: true;
+}
+
+html.topic
+{
+	mc-disabled: true;
+}
+
+i
+{
+	mc-disabled: true;
+}
+
+ins
+{
+	mc-disabled: true;
+}
+
+kbd
+{
+	mc-disabled: true;
+}
+
+MadCap|helpControlMenuItem.Highlighted
+{
+	mc-disabled: true;
+}
+
+MadCap|xref.ConceptPageNumber
+{
+	mc-disabled: true;
+}
+
+MadCap|xref.IndexPageNumber
+{
+	mc-disabled: true;
+}
+
+MadCap|xref.ListOfPageNumber
+{
+	mc-disabled: true;
+}
+
+MadCap|xref.RelLinkPageNumber
+{
+	mc-disabled: true;
+}
+
+MadCap|xref.TOCPageNumber
+{
+	mc-disabled: true;
+}
+
+p.TogglerList
+{
+	margin-left: 12pt;
+	mc-disabled: true;
+}
+
+pre
+{
+	mc-disabled: true;
+}
+
+samp
+{
+	mc-disabled: true;
+}
+
+small
+{
+	mc-disabled: true;
+}
+
+span.boolean
+{
+	mc-disabled: true;
+}
+
+span.state
+{
+	mc-disabled: true;
+}
+
+strong
+{
+	mc-disabled: true;
+}
+
+tt
+{
+	mc-disabled: true;
+}
+
+var
+{
+	mc-disabled: true;
+}
+
+p.AutoSearchFilterConcepts
+{
+	
+}
+

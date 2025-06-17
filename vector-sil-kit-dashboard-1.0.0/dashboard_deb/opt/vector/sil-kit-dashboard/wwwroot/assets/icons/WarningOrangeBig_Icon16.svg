@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <g id="SILKitDashboard">
+    <g id="WarningBig_Icon16">
+      <rect width="16" height="16" style="fill: #f0f; opacity: 0;"/>
+      <path d="M8,1L1,15H15L8,1Zm0,13c-.83,0-1.5-.67-1.5-1.5s.67-1.5,1.5-1.5,1.5,.67,1.5,1.5-.67,1.5-1.5,1.5Zm0-4c-.83,0-1.5-.67-1.5-1.5v-2c0-.83,.67-1.5,1.5-1.5s1.5,.67,1.5,1.5v2c0,.83-.67,1.5-1.5,1.5Z" style="fill: orange;"/>
+    </g>
+  </g>
+</svg>

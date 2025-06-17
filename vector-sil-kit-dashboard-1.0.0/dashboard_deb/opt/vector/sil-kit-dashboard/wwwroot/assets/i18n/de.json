@@ -1,0 +1,367 @@
+{
+  "actions": {
+    "pause": "Automatische Aktualisierung der Seite pausieren",
+    "continue": "Automatische Aktualisierung der Seite fortsetzen",
+    "show_network_setup": "Netzwerk-Setup anzeigen",
+    "show_participants_statuses": "Zustandshistorie anzeigen",
+    "show_tests": "Testergebnisse anzeigen",
+    "mark_for_delete": "Löschen",
+    "unmark_for_delete": "Wiederherstellen",
+    "results": {
+      "failure": "{{action}} fehlgeschlagen",
+      "success": "{{action}} erfolgreich"
+    }
+  },
+  "buttons": {
+    "save": "Speichern",
+    "close": "Schließen"
+  },
+  "languages": {
+    "de": "Deutsch",
+    "en": "Englisch"
+  },
+  "info": {
+    "help": {
+      "text": "Hilfe",
+      "link": "/static/de/content/topics/help/silkitdashboard.htm"
+    },
+    "license": {
+      "text": "Lizenzinformationen",
+      "link": "/static/de/content/topics/help/contactcopyrightlicense.htm"
+    },
+    "termsofuse": {
+      "text": "Nutzungsbedingungen",
+      "link": "https://cdn.vector.com/cms/content/corporate/terms-and-conditions/Vector_Terms_of_Use_for_Free_Software.pdf"
+    },
+    "vector_homepage": {
+      "text": "Vector Homepage",
+      "link": "https://www.vector.com/de/de/"
+    }
+  },
+  "units": {
+    "ms": "ms"
+  },
+  "dateFormat": "dd.MM.yyyy, HH:mm:ss.SSS",
+  "header": {
+    "simulations": "Simulationen",
+    "network-setup": "Netzwerk-Setup",
+    "participants-statuses": "Zustandshistorie",
+    "logout": "Abmelden"
+  },
+  "login": {
+    "title": "Willkommen",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "login": "Anmelden",
+    "error": {
+      "wrongusernameorpassword": "Email oder Passwort ungültig",
+      "tokenexpired": "Ihre Sitzung ist abgelaufen, bitte melden Sie sich erneut an."
+    },
+    "logout": "Sie haben sich erfolgreich abgemeldet"
+  },
+  "network": {
+    "columns": {
+      "header": {
+        "decorator": "S",
+        "name": "Netzwerkname",
+        "type": "Netzwerktyp",
+        "networkSimulators": "Simuliert von"
+      },
+      "filter": {
+        "type": "Netzwerktyp",
+        "networkSimulators": "Simuliert von"
+      }
+    },
+    "types": {
+      "CAN": "CAN",
+      "LIN": "LIN",
+      "ETHERNET": "Ethernet",
+      "FLEX_RAY": "FlexRay"
+    },
+    "empty-table": "Kein Netzwerk wurde bisher gemeldet."
+  },
+  "data-rpc-link": {
+    "columns": {
+      "header": {
+        "decorator": "S",
+        "name": "Linkname",
+        "type": "Linktyp",
+        "topicOrFunctionName": "Topic / Funktionsname"
+      },
+      "filter": {
+        "name": "Linkname",
+        "topicOrFunctionName": "Topic / Funktionsname"
+      }
+    },
+    "types": {
+      "DATA": "Data",
+      "RPC": "RPC"
+    },
+    "empty-table": "Kein Link wurde bisher gemeldet."
+  },
+  "controller": {
+    "columns": {
+      "header": {
+        "decorator": "S",
+        "networkName": "Netzwerkname",
+        "name": "Name",
+        "type": "Servicetyp"
+      },
+      "filter": {
+        "type": "Servicetyp"
+      }
+    },
+    "types": {
+      "CAN": "CAN Controller",
+      "LIN": "LIN Controller",
+      "ETHERNET": "Ethernet Controller",
+      "FLEX_RAY": "FlexRay Controller"
+    },
+    "infos": {
+      "undefined": "Info",
+      "WARNING": "Warnung",
+      "ERROR": "Fehler"
+    },
+    "empty-table": "Der Teilnehmer hat keinen Controller erzeugt."
+  },
+  "data-rpc-service": {
+    "columns": {
+      "header": {
+        "decorator": "S",
+        "name": "Name",
+        "type": "Servicetyp",
+        "topicOrFunctionName": "Topic / Funktionsname",
+        "mediaType": "Medientyp",
+        "labels": "Labels"
+      },
+      "filter": {
+        "type": "Servicetyp",
+        "topicOrFunctionName": "Topic / Funktionsname",
+        "mediaType": "Medientyp",
+        "labels": "Labels"
+      }
+    },
+    "types": {
+      "DATA_PUBLISHER": "Data Publisher",
+      "DATA_SUBSCRIBER": "Data Subscriber",
+      "RPC_SERVER": "RPC Server",
+      "RPC_CLIENT": "RPC Client"
+    },
+    "infos": {
+      "undefined": "Info",
+      "WARNING": "Warnung",
+      "ERROR": "Fehler"
+    },
+    "empty-table": "Der Teilnehmer hat keinen Service erzeugt."
+  },
+  "no-selection": {
+    "columns": {
+      "header": {
+        "name": "Name"
+      }
+    },
+    "empty-table": "Klicken Sie auf einen Teinehmer oder eine Verbindung damit Informationen hier erscheinen."
+  },
+  "participant": {
+    "columns": {
+      "header": {
+        "name": "Teilnehmername",
+        "decorator": "S",
+        "state": "Zustand",
+        "enterReason": "Grund",
+        "enterTime": "Eintrittszeit",
+        "duration": "Dauer"
+      },
+      "filter": {
+        "enterReason": "Grund",
+        "duration": "Dauer"
+      }
+    },
+    "infos": {
+      "undefined": "Info",
+      "WARNING": "Warnung",
+      "ERROR": "Fehler"
+    },
+    "states": {
+      "UNKNOWN": "Unbekannt",
+      "INVALID": "Ungültig",
+      "SERVICES_CREATED": "Dienste erzeugt",
+      "COMMUNICATION_INITIALIZING": "Kommunikation wird initialisiert",
+      "COMMUNICATION_INITIALIZED": "Kommunikation initialisiert",
+      "READY_TO_RUN": "Bereit zu laufen",
+      "RUNNING": "Läuft",
+      "PAUSED": "Pausiert",
+      "STOPPING": "Wird gestoppt",
+      "STOPPED": "Gestoppt",
+      "ERROR": "Fehler",
+      "SHUTTING_DOWN": "Wird heruntergefahren",
+      "SHUTDOWN": "Heruntergefahren",
+      "ABORTING": "Wird abgebrochen"
+    },
+    "empty-table": "Kein Teilnehmer hat bisher eine Zustandsänderung gemeldet."
+  },
+  "simulation": {
+    "columns": {
+      "header": {
+        "hidden": "Gelöscht",
+        "status": "S",
+        "id": "#",
+        "started": "Start",
+        "stopped": "Ende",
+        "connectUri": "Connect URI",
+        "state": "Systemstatus",
+        "action": "Aktionen"
+      },
+      "desc": {
+        "id": ""
+      },
+      "filter": {
+        "hidden": "Gelöscht",
+        "id": "Id",
+        "started": "Start",
+        "stopped": "Ende",
+        "state": "Systemstatus"
+      }
+    },
+    "statuss": {
+      "RUNNING": "Läuft",
+      "SUCCESS": "Erfolgreich",
+      "FAILURE": "Fehlgeschlagen"
+    },
+    "states": {
+      "null": "Unbekannt",
+      "UNKNOWN": "Unbekannt",
+      "INVALID": "Ungültig",
+      "SERVICES_CREATED": "Dienste erzeugt",
+      "COMMUNICATION_INITIALIZING": "Kommunikation wird initialisiert",
+      "COMMUNICATION_INITIALIZED": "Kommunikation initialisiert",
+      "READY_TO_RUN": "Bereit zu laufen",
+      "RUNNING": "Läuft",
+      "PAUSED": "Pausiert",
+      "STOPPING": "Wird gestoppt",
+      "STOPPED": "Gestoppt",
+      "ERROR": "Fehler",
+      "SHUTTING_DOWN": "Wird heruntergefahren",
+      "SHUTDOWN": "Heruntergefahren",
+      "ABORTING": "Wird abgebrochen"
+    },
+    "empty-table": "Starten Sie eine Simulation damit ihre Daten hier erscheinen."
+  },
+  "network-setup": {
+    "title": "Netzwerk-Setup",
+    "chart": {
+      "legend": {
+        "title": "Legende",
+        "abstract": "aggregiert",
+        "network simulated": "simuliert",
+        "participant": "Teilnehmer",
+        "selected": "ausgewählt",
+        "WARNING": "Warnung",
+        "ERROR": "Fehler",
+        "CAN": "CAN",
+        "LIN": "LIN",
+        "ETHERNET": "Ethernet",
+        "FLEX_RAY": "FlexRay",
+        "other": "anderes"
+      },
+      "empty": "Kein Teilnehmer und kein Netzwerk wurde bisher registriert."
+    },
+    "tabs": {
+      "networks": "Netzwerke",
+      "data-rpc-links": "Data / RPC",
+      "controllers": "Controllers",
+      "data-rpc-services": "Data / RPC Services"
+    },
+    "tooltips": {
+      "no-participant-in-network": "Kein Teilnehmer in diesem Netzwerk",
+      "participant-created-no-service": "Der Teilnehmer hat keinen Service erzeugt",
+      "participant-created-many-services": "Der Teilnehmer hat mehrere Services für ein Netzwerk erzeugt",
+      "no-matching-cancontroller": "Keinen passenden CAN Controller im Netzwerk gefunden",
+      "no-matching-ethernetcontroller": "Keinen passenden Ethernet Controller im Netzwerk gefunden",
+      "no-matching-flexraycontroller": "Keinen passenden FlexRay Controller im Netzwerk gefunden",
+      "no-matching-lincontroller": "Keinen passenden LIN Controller im Netzwerk gefunden",
+      "no-matching-datapublisher": "Keinen passenden Data Publisher im Netzwerk gefunden",
+      "no-matching-datasubscriber": "Keinen passenden Data Subscriber im Netzwerk gefunden",
+      "no-matching-rpcclient": "Keinen passenden RPC Client im Netzwerk gefunden",
+      "no-matching-rpcserver": "Keinen passenden RPC Server im Netzwerk gefunden",
+      "too-many-matching-datapublishers": "Zu viele Data Publishers im Netzwerk gefunden",
+      "too-many-matching-rpcservers": "Zu viele RPC Server im Netzwerk gefunden",
+      "too-many-networksimulators": "Zu viele Netzwerk Simulatoren simulieren das selbe Netzwerk"
+    },
+    "select-layout": "Ansicht",
+    "menu": {
+      "overview": "Übersicht",
+      "participant-selected": "Teilnehmer: {{name}}",
+      "participant": "Teilnehmer",
+      "network-selected": "Netzwerk: {{name}}",
+      "network": "Netzwerke",
+      "topic-selected": "Topic: {{name}}",
+      "topic": "Topics",
+      "functionName-selected": "Funktionsname: {{name}}",
+      "functionName": "Funktionsnamen"
+    }
+  },
+  "simulations": {
+    "title": "Simulationen"
+  },
+  "participants-statuses": {
+    "title": "Zustandshistorie"
+  },
+  "simulation-title": "Simulation #{{id}} ({{started}})",
+  "simulation-subtitle": "{{name}}",
+  "table": {
+    "columns": "Spalten",
+    "filter": {
+      "title": "Filter",
+      "equals": "==",
+      "greater": ">=",
+      "lower": "<=",
+      "date": "Datum auswählen",
+      "all": "(Alles auswählen)"
+    },
+    "search": "Suche...",
+    "sort": {
+      "string": {
+        "asc": "Von A bis Z sortieren",
+        "desc": "Von Z bis A sortieren"
+      },
+      "number": {
+        "asc": "Nach Größe sortieren (aufsteigend)",
+        "desc": "Nach Größe sortieren (absteigend)"
+      },
+      "date": {
+        "asc": "Nach Datum sortieren (aufsteigend)",
+        "desc": "Nach Datum sortieren (absteigend)"
+      },
+      "predefined": {
+        "asc": "Nach vordefinierte Reihenfolge sortieren (aufsteigend)",
+        "desc": "Nach vordefinierte Reihenfolge sortieren (absteigend)"
+      }
+    },
+    "paginator": {
+      "itemsPerPage": "Elemente pro Seite",
+      "page": "Seite",
+      "of": "von",
+      "first-page": "Erste Seite",
+      "prev-page": "Vorherige Seite",
+      "next-page": "Nächste Seite",
+      "last-page": "Letzte Seite"
+    },
+    "configuration": {
+      "is": "ist",
+      "and": "und",
+      "greater": "ist größer oder gleich als"
+    }
+  },
+  "error": {
+    "go-home": "Zurück zur Dashboard Einstiegsseite",
+    "0": "Verbindung abgelehnt, bitte versuchen Sie es später noch einmal.",
+    "400": "Die Anfrage ist fehlerhaft, bitte wiederholen Sie sie nicht.",
+    "401": "Authentifizierung erforderlich.",
+    "403": "Zugriffsrechte erforderlich.",
+    "404": "Die angeforderte Resource ist nicht verfügbar.",
+    "500": "Ein interner Fehler ist aufgetreten, bitte versuchen Sie es später noch einmal."
+  },
+  "false": "nein",
+  "true": "ja"
+}

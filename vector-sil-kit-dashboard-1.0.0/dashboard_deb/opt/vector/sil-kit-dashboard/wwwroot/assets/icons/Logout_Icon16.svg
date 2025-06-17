@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <g id="SILKitDashboard">
+    <g id="Logout_Icon16">
+      <rect width="16" height="16" style="fill: #f0f; opacity: 0;"/>
+      <polygon points="15 8 11 4 11 6 4 6 4 10 11 10 11 12 15 8" style="fill: #4c4c4c;"/>
+      <rect x="1" y="2" width="8" height="1" transform="translate(10 5) rotate(180)" style="fill: #4c4c4c;"/>
+      <rect x="1" y="13" width="8" height="1" transform="translate(10 27) rotate(180)" style="fill: #4c4c4c;"/>
+      <rect x="1" y="2" width="1" height="12" style="fill: #4c4c4c;"/>
+    </g>
+  </g>
+</svg>

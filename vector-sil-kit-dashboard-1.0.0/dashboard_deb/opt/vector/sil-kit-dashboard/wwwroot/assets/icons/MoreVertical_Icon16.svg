@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <g id="SILKitDashboard">
+    <g id="MoreVertical_Icon16">
+      <rect x="0" y="0" width="16" height="16" transform="translate(0 16) rotate(-90)" style="fill: #f0f; opacity: 0;"/>
+      <circle cx="8" cy="14" r="2" style="fill: #4c4c4c;"/>
+      <circle cx="8" cy="8" r="2" style="fill: #4c4c4c;"/>
+      <circle cx="8" cy="2" r="2" style="fill: #4c4c4c;"/>
+    </g>
+  </g>
+</svg>

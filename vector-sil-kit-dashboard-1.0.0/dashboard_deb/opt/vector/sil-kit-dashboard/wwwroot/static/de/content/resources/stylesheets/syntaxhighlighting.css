@@ -1,0 +1,234 @@
+﻿/* PrismJS 1.23.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+actionscript+autohotkey+bash+basic+batch+c+csharp+cpp+css-extras+docker+git+ini+json+json5+matlab+powershell+python+regex+shell-session+tcl+uri+vbnet+visual-basic+xml-doc&plugins=toolbar+copy-to-clipboard */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: none;
+	font-family: 'Courier New';
+	font-size: 10pt;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	mc-hidden: hidden;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: b3d4fc;
+	mc-hidden: hidden;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: b3d4fc;
+	mc-hidden: hidden;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	mc-hidden: hidden;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #dadee1;
+	mc-hidden: hidden;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+	mc-hidden: hidden;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #199C64; /**span.CodeComment**/
+	mc-hidden: hidden;
+}
+
+.token.punctuation {
+	color: #000000; /**black**/
+	mc-hidden: hidden;
+}
+
+.token.namespace {
+	opacity: .7;
+	mc-hidden: hidden;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #000000; /**black**/
+	mc-hidden: hidden;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #800040 ; /**span.CodeStrinLiteral**/
+	mc-hidden: hidden;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #000000; /**black**/
+	/* This background color was intended by the author of this theme. */
+	background: #dadee1;
+	mc-hidden: hidden;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #ff00ff; /**pink**/
+	mc-hidden: hidden;
+}
+
+.token.function,
+.token.class-name {
+	color: #a3722b; /**brown**/
+	mc-hidden: hidden;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #32eaea; /**light blue**/
+	mc-hidden: hidden;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+	mc-hidden: hidden;
+}
+
+.token.italic {
+	font-style: italic;
+	mc-hidden: hidden;
+}
+
+.token.entity {
+	cursor: help;
+	mc-hidden: hidden;
+}
+
+div.code-toolbar {
+	position: relative;
+	mc-hidden: hidden;
+}
+
+div.code-toolbar > .toolbar {
+	position: absolute;
+	top: .3em;
+	right: .2em;
+	transition: opacity 0.3s ease-in-out;
+	opacity: 0;
+	mc-hidden: hidden;
+}
+
+div.code-toolbar:hover > .toolbar {
+	opacity: 1;
+	mc-hidden: hidden;
+}
+
+/* Separate line b/c rules are thrown out if selector is invalid.
+   IE11 and old Edge versions don't support :focus-within. */
+div.code-toolbar:focus-within > .toolbar {
+	opacity: 1;
+	mc-hidden: hidden;
+}
+
+div.code-toolbar > .toolbar .toolbar-item {
+	display: inline-block;
+}
+
+div.code-toolbar > .toolbar a {
+	cursor: pointer;
+	mc-hidden: hidden;
+}
+
+div.code-toolbar > .toolbar button {
+	background: none;
+	border: 0;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+	overflow: visible;
+	padding: 0;
+	-webkit-user-select: none; /* for button */
+	-moz-user-select: none;
+	-ms-user-select: none;
+	mc-hidden: hidden;
+}
+
+div.code-toolbar > .toolbar a,
+div.code-toolbar > .toolbar button,
+div.code-toolbar > .toolbar span {
+	color: #bbb;
+	font-size: .8em;
+	padding: 0 .5em;
+	background: #f5f2f0;
+	background: rgba(224, 224, 224, 0.2);
+	box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
+	border-radius: .5em;
+	mc-hidden: hidden;
+}
+
+div.code-toolbar > .toolbar a:hover,
+div.code-toolbar > .toolbar a:focus,
+div.code-toolbar > .toolbar button:hover,
+div.code-toolbar > .toolbar button:focus,
+div.code-toolbar > .toolbar span:hover,
+div.code-toolbar > .toolbar span:focus {
+	color: inherit;
+	text-decoration: none;
+	mc-hidden: hidden;
+}

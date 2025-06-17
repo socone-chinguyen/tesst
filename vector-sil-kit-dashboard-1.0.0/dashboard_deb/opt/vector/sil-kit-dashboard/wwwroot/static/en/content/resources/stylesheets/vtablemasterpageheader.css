@@ -1,0 +1,338 @@
+/* MadCap Table Style: */
+
+/*<meta Version="9" />*/
+
+mcTableStyle
+{
+	name: vTableMasterPageHeader;
+	border-collapse: collapse;
+	max-id: 4;
+	background-color: #565c5e;
+	margin-bottom: 0px;
+}
+
+mcTableBodyStyle
+{
+	span: 1;
+	id: 4;
+	name: Body1;
+	cell-padding-left: 0px;
+	cell-padding-right: 0px;
+	cell-padding-top: 0px;
+	cell-padding-bottom: 0px;
+}
+
+
+/* Cell Styles: */
+ 
+.TableStyle-vTableMasterPageHeader
+{
+	border-collapse: collapse;
+	background-color: #565c5e;
+	margin-bottom: 0px;
+	border-spacing: 0px 0px;
+}
+
+.TableStyle-vTableMasterPageHeader-HeadI--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadI-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadE--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadE-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadF--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadF-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadH--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadH-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadD--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadD-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadC--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadC-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadB--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadB-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadA--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadA-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadG--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-HeadG-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootI--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootI-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootE--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootE-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootF--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootF-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootH--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootH-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootD--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootD-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootC--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootC-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootB--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootB-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootA--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootA-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootG--
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-FootG-- p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-Body-Body1
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-BodyI--Body1
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.TableStyle-vTableMasterPageHeader-BodyI--Body1 p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-BodyE--Body1
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.TableStyle-vTableMasterPageHeader-BodyE--Body1 p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-BodyF--Body1
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.TableStyle-vTableMasterPageHeader-BodyF--Body1 p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-BodyH--Body1
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.TableStyle-vTableMasterPageHeader-BodyH--Body1 p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-BodyD--Body1
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.TableStyle-vTableMasterPageHeader-BodyD--Body1 p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-BodyC--Body1
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.TableStyle-vTableMasterPageHeader-BodyC--Body1 p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-BodyB--Body1
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.TableStyle-vTableMasterPageHeader-BodyB--Body1 p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-BodyA--Body1
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.TableStyle-vTableMasterPageHeader-BodyA--Body1 p
+{
+	
+}
+
+.TableStyle-vTableMasterPageHeader-BodyG--Body1
+{
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.TableStyle-vTableMasterPageHeader-BodyG--Body1 p
+{
+	
+}
+
+

@@ -1,0 +1,36 @@
+dn: ou=group,dc=company,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: group
+
+dn: ou=people,dc=company,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=user@company.com,ou=people,dc=company,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: User
+sn: User
+uid: user@company.com
+userPassword: userspassword
+
+dn: uid=expert@company.com,ou=people,dc=company,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Expert
+sn: Expert
+uid: expert@company.com
+userPassword: expertspassword
+
+dn: cn=experts,ou=group,dc=company,dc=com
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: experts
+ou: expert
+uniqueMember: uid=expert@company.com,ou=people,dc=company,dc=com

@@ -1,0 +1,15 @@
+[Unit]
+Description=SIL Kit Dashboard by Vector Informatik GmbH
+After=network-online.target
+
+[Service]
+WorkingDirectory=/opt/vector/sil-kit-dashboard
+ExecStart=/opt/vector/sil-kit-dashboard/SILKitDashboard.Backend
+Restart=on-failure
+RestartSec=5
+Group=sil-kit-dashboard
+User=sil-kit-dashboard
+Environment="DOTNET_ROOT=/usr/bin/dotnet ASPNETCORE_ENVIRONMENT=Production"
+
+[Install]
+WantedBy=multi-user.target

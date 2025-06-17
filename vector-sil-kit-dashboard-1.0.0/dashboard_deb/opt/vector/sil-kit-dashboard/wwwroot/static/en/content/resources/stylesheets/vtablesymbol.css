@@ -1,0 +1,630 @@
+/* MadCap Table Style: */
+
+/*<meta Version="9" />*/
+
+mcTableStyle
+{
+	name: vTableSymbol;
+	border-collapse: collapse;
+	max-id: 8;
+	margin-bottom: 15px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	id: 6;
+	name: Column1;
+	size: 50px;
+	
+	/* due to eclipse help file generation we have to enter the following line; otherwise the Internet Explorer engine doesn't display the first column in "fit with to content" mode */
+	width: 50px;
+	
+	separator-style: none;
+	separator-width: 1px;
+	separator-color: #b70032;
+	cell-padding-top: 0px;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	id: 7;
+	name: Column2;
+	background-color: #F0F5F5;
+}
+
+
+/* Cell Styles: */
+ 
+.TableStyle-vTableSymbol
+{
+	border-collapse: collapse;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 15px;
+	border-spacing: 0px 0px;
+}
+
+.TableStyle-vTableSymbol-Column-Column1
+{
+	width: 50px;
+}
+
+.TableStyle-vTableSymbol-Column-Column2
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadI-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-HeadI-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadE-Column1-
+{
+	padding-top: 0px;
+	border-right-width: 1px;
+	border-right-color: #b70032;
+	border-right-style: none;
+}
+
+.TableStyle-vTableSymbol-HeadE-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadF-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-HeadF-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadH-Column1-
+{
+	padding-top: 0px;
+	border-right-width: 1px;
+	border-right-color: #b70032;
+	border-right-style: none;
+}
+
+.TableStyle-vTableSymbol-HeadH-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadD-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-HeadD-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadC-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-HeadC-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadB-Column1-
+{
+	padding-top: 0px;
+	border-right-width: 1px;
+	border-right-color: #b70032;
+	border-right-style: none;
+}
+
+.TableStyle-vTableSymbol-HeadB-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadA-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-HeadA-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadG-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-HeadG-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadI-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-HeadI-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadE-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-HeadE-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadF-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-HeadF-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadH-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-HeadH-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadD-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-HeadD-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadC-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-HeadC-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadB-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-HeadB-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadA-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-HeadA-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-HeadG-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-HeadG-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootI-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-FootI-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootE-Column1-
+{
+	padding-top: 0px;
+	border-right-width: 1px;
+	border-right-color: #b70032;
+	border-right-style: none;
+}
+
+.TableStyle-vTableSymbol-FootE-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootF-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-FootF-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootH-Column1-
+{
+	padding-top: 0px;
+	border-right-width: 1px;
+	border-right-color: #b70032;
+	border-right-style: none;
+}
+
+.TableStyle-vTableSymbol-FootH-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootD-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-FootD-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootC-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-FootC-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootB-Column1-
+{
+	padding-top: 0px;
+	border-right-width: 1px;
+	border-right-color: #b70032;
+	border-right-style: none;
+}
+
+.TableStyle-vTableSymbol-FootB-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootA-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-FootA-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootG-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-FootG-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootI-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-FootI-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootE-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-FootE-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootF-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-FootF-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootH-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-FootH-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootD-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-FootD-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootC-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-FootC-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootB-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-FootB-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootA-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-FootA-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-FootG-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-FootG-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyI-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-BodyI-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyE-Column1-
+{
+	padding-top: 0px;
+	border-right-width: 1px;
+	border-right-color: #b70032;
+	border-right-style: none;
+}
+
+.TableStyle-vTableSymbol-BodyE-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyF-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-BodyF-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyH-Column1-
+{
+	padding-top: 0px;
+	border-right-width: 1px;
+	border-right-color: #b70032;
+	border-right-style: none;
+}
+
+.TableStyle-vTableSymbol-BodyH-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyD-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-BodyD-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyC-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-BodyC-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyB-Column1-
+{
+	padding-top: 0px;
+	border-right-width: 1px;
+	border-right-color: #b70032;
+	border-right-style: none;
+}
+
+.TableStyle-vTableSymbol-BodyB-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyA-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-BodyA-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyG-Column1-
+{
+	padding-top: 0px;
+}
+
+.TableStyle-vTableSymbol-BodyG-Column1- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyI-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-BodyI-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyE-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-BodyE-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyF-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-BodyF-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyH-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-BodyH-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyD-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-BodyD-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyC-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-BodyC-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyB-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-BodyB-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyA-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-BodyA-Column2- p
+{
+	
+}
+
+.TableStyle-vTableSymbol-BodyG-Column2-
+{
+	background-color: #F0F5F5;
+}
+
+.TableStyle-vTableSymbol-BodyG-Column2- p
+{
+	
+}
+
+

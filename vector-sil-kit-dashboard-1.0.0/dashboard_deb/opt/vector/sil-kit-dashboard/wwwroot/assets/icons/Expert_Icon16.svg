@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <g id="SILKitDashboard">
+    <g id="Expert_Icon16">
+      <rect width="16" height="16" transform="translate(16) rotate(90)" style="fill: #f0f; opacity: 0;"/>
+      <g>
+        <rect x="2" y="6" width="1" height="3.86" style="fill: #4c4c4c;"/>
+        <path d="M8,10.12l-3.6-1.8c-.23,.49-.4,1.05-.4,1.68l4,2,4-2c0-.65-.14-1.23-.31-1.73l-3.69,1.84Z" style="fill: #4c4c4c;"/>
+        <polygon points="2 6 8 3 14 6 8 9 2 6" style="fill: #4c4c4c;"/>
+        <path d="M1,13h3v-2.99s-.36-1.01-1.49-1.01-1.51,1.01-1.51,1.01v2.99Z" style="fill: #4c4c4c;"/>
+      </g>
+    </g>
+  </g>
+</svg>

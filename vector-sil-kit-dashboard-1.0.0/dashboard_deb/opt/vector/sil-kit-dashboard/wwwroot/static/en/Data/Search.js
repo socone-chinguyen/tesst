@@ -1,0 +1,1 @@
+define({r:0.5,st:'Stem',n:1,t:[0],m:[],u:['../content/topics/help/contactcopyrightlicense.htm'],s:['0','com','elected','iability','licen','occurre','rademarks','spl','unicatio'],p:[['0',7],['provided',4]]});

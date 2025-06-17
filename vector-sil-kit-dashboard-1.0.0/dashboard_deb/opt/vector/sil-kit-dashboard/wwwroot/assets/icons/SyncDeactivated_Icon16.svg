@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <g id="SILKitDashboard">
+    <g id="SyncDeactivated_Icon16">
+      <rect width="16" height="16" style="fill: #f0f; opacity: 0;"/>
+      <path d="M5,8c0,.63,.2,1.22,.53,1.7l.85-1.7h-1.38Z" style="fill: none;"/>
+      <path d="M11,8c0-.63-.2-1.22-.53-1.7l-.85,1.7h1.38Z" style="fill: none;"/>
+      <path d="M8,3v1.76l.84-1.68c-.27-.05-.55-.08-.84-.08Z" style="fill: #4c4c4c;"/>
+      <path d="M8,13v-1.76l-.84,1.68c.27,.05,.55,.08,.84,.08Z" style="fill: #4c4c4c;"/>
+      <path d="M13,8c0-1.43-.61-2.71-1.57-3.62l-.96,1.92c.33,.48,.53,1.07,.53,1.7h-2l.41,.41,1.14,1.14,1.43,1.43h.01l3-2.99h-2Z" style="fill: #4c4c4c;"/>
+      <path d="M6.38,8h.62l-.41-.41-1.14-1.14-1.43-1.43h-.01l-3,2.99H3c0,1.43,.61,2.71,1.57,3.62l.96-1.92c-.33-.48-.53-1.07-.53-1.7h1.38Z" style="fill: #4c4c4c;"/>
+      <polygon points="5 15 4 15 11 1 12 1 5 15" style="fill: #4c4c4c;"/>
+    </g>
+  </g>
+</svg>

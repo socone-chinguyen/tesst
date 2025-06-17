@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html lang="en">
+  <head>
+    <style>
+      body {
+        margin: 20px;
+        font-size: 11pt;
+        font-family: Tahoma, arial, sans-serif;
+        color: #000000;
+        background-color: #FFFFFF;
+        text-align: left;
+      }
+
+      h1 {
+        font-size: 20pt;
+        font-weight: normal;
+      }
+
+      h1 img {
+        vertical-align: bottom;
+        padding-bottom: 2px;
+      }
+
+      h2 {
+        height: 30px;
+        line-height: 30px;
+        text-align: left;
+        background-color: #E5E5E5;
+        font-size: 11pt;
+        font-weight: bold;
+      }
+
+      h3 {
+        font-size: 11pt;
+        padding-top: 5pt;
+        padding-left: 18pt;
+      }
+
+      table {
+        width: 100%;
+        border: 1px solid #E5E5E5;
+        margin-bottom: 15pt;
+        margin-top: 15pt;
+        border-spacing: 0;
+      }
+
+      li {
+        list-style-image: url("data:image/gif;base64,R0lGODlhCwAJAIcAAAAAAJCQkJCQo6OQkKOQo5CjyaOjycnt///tye3//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQBAAD/ACwAAAAACwAJAAAIMgARGEjwr6DBgggGBChA8OC/hAEiMjwIMaLEhhUtXswYUcABhAo7fjQI0aPDhwRGngwIADs=")
+      }
+
+      table.head {
+        width: 100%;
+        background-color: #E5E5E5;
+        border-color: White;
+        border-width: 0;
+        text-align: center;
+        color: #000000;
+      }
+
+
+      .VectorLogo {
+        width: 130px;
+      }
+
+      .caption {
+        height: 30px;
+        line-height: 30px;
+        text-align: left;
+        background-color: #E5E5E5;
+        font-size: 11pt;
+        font-weight: bold;
+      }
+
+      .where:before {
+        content: "Context: ";
+      }
+
+      .where {
+        font-size: 9pt;
+        font-style: normal;
+        display: block;
+        width: 65em;
+        padding-bottom: 5pt;
+      }
+
+      td,
+      th {
+        vertical-align: top;
+        border: 1px solid #E5E5E5;
+        border-spacing: 0;
+        font-size: 11pt;
+      }
+
+      .license-component-details {
+        font-weight: bold;
+      }
+
+    </style>
+    <title>SIL Kit Dashboard - Third Party Software</title>
+  </head>
+
+  <body>
+    <table style="border: 0px; border-spacing: 2px;">
+      <tbody>
+        <tr>
+          <td style="border: 0px">
+            <h1><img
+                src="data:image/gif;base64,R0lGODlheAAcAPcAAO/v709PT9/f37+/v/HP2M/Pzy8vL/n5+f7+/hAQEPv7+39/f/b29h8fHwwMDAgICAEBAcfHx/z8/PX19cDAwNPT00lJSWtraxUVFVhYWPf39zY2Ng8PD/r6+qSkpHd3d/Pz80pKSrsNPLoKOru7u4WFhSIiIoSEhIqKitXV1b8dSf33+b4aR/fh5xoaGuTk5HR0dO/F0FRUVMAgTOjo6OPj4/LS270VQ7gENURERLwRQImJiRISEgoKCk5OTqmpqcY0XIGBgeaouffk6VpaWuHh4a2trfz09uWktgkJCUZGRjU1Ne3BzeisvMjIyLcBM5GRkV9fX/no7dt/mNfX10dHR8XFxdJhgMlBZrgDNMc5YPbe5CEhIeGTqJ2dnf79/frv8gQEBAMDA9dwjAICAg0NDfDL1fTX3zo6OsElUMtHa9Vphv35+js7O3JycrkHOLoJOeqzwv39/dp7lcrKygcHB3l5ea+vr85SdP/+/s9Wd9Fbe/rt8cUwWd6JoPz2+KGhoR0dHdyEnKKiov77/AsLC8PDw3FxceKZrZiYmL29vfHx8eKYrGVlZTQ0NJmZmXh4eNzc3Li4uKqqqjc3NzExMQ4ODmJiYtbW1tTU1GpqavT09Lq6ui0tLTk5OeDg4O3t7QUFBWFhYVdXVyoqKqenp5qamurq6o+PjygoKKOjo3p6euLi4uXl5dvb28HBwUVFRenp6fj4+Ht7e+zs7NnZ2REREaurq319fXx8fLcAMgAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAB4ABwAAAj/AHkJHEiwoMGDCBMqXMiwIUECeLY4nEixosWLFgnoejPnCMaPIEOKLKhRly4WSPKMXMmy5cGSJnVpMeOypk2QMGM+uSLlps+fC3PG1CXCDxugSJMKHaorTRyGAKIyMDghKoCBEqxqjargYAcKqm5FIthh69ZFBlkZGaRo6kGzUeUsJNRFB1Omas4oVLJrV6quAxkE6itjYIG+iBMPKChhR4LEaOgIvJO48q4GBKnASuwg1wGDlvsm+PBZIZ81We7GxDEGDMJMYvpCIRik7wMBhkP3XTxQgY/QSV7woqz78sBXDkK3mVCw+K7CDG1gUR3zBqIvBy+IpiWwRo++qwge/94VJoD58xUI2kHMQYkjCGQ8CHRyvk1fS+cbCTzFA3EnCxggdklzfYVwHiWIGeJQEzNQZ1IfTBgEii19aSIQEX25AIJ4fXGgEA0P9DXKhrxE8MNBA/RlgEEw9FUGJwJpoN0uEFBBEGJXDWRBXydMtIIgIzioix4tFARFX2JUEAFigBQ0Xh0LRLkAKgV50ZcJpSmU4i4rFsRFX48QhMAGfZVwY1858oJAFTxWNMQeQsIxxR+9kdJXDmTusgQCToaGGUEf9OVGQ1t2OdABOBaEQl9RnLmLgeZVgpgVF8UAhJAqCDGQJJZFYNB4lf05UKC7DMpQoQUhiqaijDoaWgYYWf+KqaYDhZAYEQeNV8gAvA7gKUFW7oLlqSoa9OUupoiZp5kDFWdHBxa9GeecBdUSSl891JBrhx/W0VcGJDoxCYrFFtTiLmWQIJAsM0KAiaOfAJBCiLssUNGPQTpIJEKH9BUEQuOVd5556Q0ECWIJVLEEfPIVhGpBsfSnIoCIiULgLjniYlsREzEoJIQKAYBBIG59WhxvAvkGnHAEPVwQBclZhgZzjua4iQvfNiSdkDcwgt1CiZSSEKiWoSxQY48h5olkDpdrUAo5cDZLls2uKpAHk5qGmoOsudaQBHwidIAAZJddtgYHHUDBID+4gpAGZLeiUBFGAEJCyQWVLZdACJQ9nWZBdNnlYF5JFV7TUkM5ZfjiLSFOlFGMRz7SUjv1JPnlODE1E+acfwQTSip1LnpFGnHk0eioTwSRRB8FBAA7"
+                alt="Vector Logo">&nbsp;&nbsp;&nbsp;
+              <span>SIL Kit Dashboard - Third Party Software</span>
+            </h1>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>This Notice file represents the best efforts of Vector Informatik to list the Third-Party components and licenses used in this product.<br></p>
+    <p>If the license conditions allow it, you can request the source code (including changes) via support@vector.com.</p>
+     <p>This file is structured in the following parts:
+        </p>
+        <ul>
+          <li><a href="#Components">Components</a>: A list of all components with used versions and applicable licenses</li>
+          <li><a href="#Licenses">Licenses</a>: The full license texts of the applicable licenses</li>
+          <li><a href="#CopyAndNotice">Copyright Data and Notices</a></li>
+          
+        </ul>
+      <p>
+    </p>
+    <div class="col-md-12">
+      <h1 id="Components">Components</h1>
+      <table class="table backgrid notices-component-table">
+        <thead>
+          <tr>
+            <th scope="col" class="renderable">Component</th>
+            <th scope="col" class="renderable">License</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+                    <td class="renderable"><a href="#COM_bc1dc546b6ea686df547fabc33006e61aa781252e323f92bfaa75730963f083a"><span class="project-version">
+                      <span class="project-name">@angular-material-components/datetime-picker</span> <span class="version-name">8.0.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_fcd24fb0c8776cf9858393ecb9819893935b0212799d728d9ebad8be1a41f19d"><span class="project-version">
+                      <span class="project-name">@angular-material-components/moment-adapter</span> <span class="version-name">8.0.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_6df29f7dc46d1f995a1073ed717a9ddbbe2947a5a27774ed770c0d9c3cae3c49"><span class="project-version">
+                      <span class="project-name">@angular/animations</span> <span class="version-name">14.2.12</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_95b788951ecb5ca9439cebb8584c451ec2b5982768f4a56b374b18c7d41302d8"><span class="project-version">
+                      <span class="project-name">@angular/cdk</span> <span class="version-name">14.2.7</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_4b4273105a3fc5261e351ef37fb9fee241d9d8842d31a7ae91edde2b689db602"><span class="project-version">
+                      <span class="project-name">@angular/common</span> <span class="version-name">14.2.12</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_a0e37b6146d00b60f0f14aaa2f7f1e5e587fa49f17e5ce5e3273c8ed5e045707"><span class="project-version">
+                      <span class="project-name">@angular/compiler</span> <span class="version-name">14.2.12</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_465069681b992ecb28778929e33680dae7ff17724c709f9a0070c9c87eeed2a9"><span class="project-version">
+                      <span class="project-name">@angular/flex-layout</span> <span class="version-name">14.0.0-beta.41</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_c58797bd4cc0e16e0673ed555dc6e9a76c91d83b47f15973db6cec3667d4f810"><span class="project-version">
+                      <span class="project-name">@angular/forms</span> <span class="version-name">14.2.12</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_86842d4d1af350434a53cb56c4393a87f6a3253abb1790bdc19e9a40e1f75493"><span class="project-version">
+                      <span class="project-name">@angular/platform-browser-dynamic</span> <span class="version-name">14.2.12</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_f937b1b1ba464ee28692f5ba7cad5722396ecc1d289be8cf6182b26855696823"><span class="project-version">
+                      <span class="project-name">@angular/platform-browser</span> <span class="version-name">14.2.12</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_006d91a367c6f4f67f758bcf8e26533a4208d68da8f554a6381b74bfaee72034"><span class="project-version">
+                      <span class="project-name">@angular/router</span> <span class="version-name">14.2.12</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_70958cde6b0f52974184d334efdcd01915a88d477c221b0a689afbc3f1845240"><span class="project-version">
+                      <span class="project-name">@apollo/client</span> <span class="version-name">3.8.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_15f7f95ab4804ed304d1d17dcbc11619e9f7d4ebeacb62ee1c4a52105ce7cae8"><span class="project-version">
+                      <span class="project-name">@auth0/angular-jwt</span> <span class="version-name">5.2.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                <td class="renderable"><span class="project-version">
+                  <span class="project-name">@fontsource/roboto</span> <span class="version-name">4.5.8</span>
+                </span></td>
+                <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_f9253352802b6b06e73cf9e3a0bbceb6940acae5d5d6b2c88fe61f3ed56f08ea"><span class="project-version">
+                      <span class="project-name">@graphql-typed-document-node/core</span> <span class="version-name">3.2.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                <td class="renderable"><span class="project-version">
+                  <span class="project-name">@ngx-translate/http-loader</span> <span class="version-name">7.0.0</span>
+                </span></td>
+                <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_9627eec9d12814514f8c9b87a7cbab9519d475b53701f653756c75153c6aee36"><span class="project-version">
+                      <span class="project-name">@swimlane/ngx-graph</span> <span class="version-name">8.2.2</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                <td class="renderable"><span class="project-version">
+                  <span class="project-name">@wry/context</span> <span class="version-name">0.7.4</span>
+                </span></td>
+                <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_93dae4a227477950216847681b9c6b967b2c518c8607438a9f22418f68af333a"><span class="project-version">
+                      <span class="project-name">@wry/equality</span> <span class="version-name">0.5.7</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                <td class="renderable"><span class="project-version">
+                  <span class="project-name">@wry/trie</span> <span class="version-name">0.4.3</span>
+                </span></td>
+                <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_61d4e6fcf7801787b5a244cfcb0a4207c1e84fd71f6fb00d3120d3a205477a89"><span class="project-version">
+                      <span class="project-name">Angular</span> <span class="version-name">14.2.12</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                <td class="renderable"><span class="project-version">
+                  <span class="project-name">ChilliCream/hotchocolate</span> <span class="version-name">14.0.0</span>
+                </span></td>
+                <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                <td class="renderable"><span class="project-version">
+                  <span class="project-name">HotChocolate.AspNetCore</span> <span class="version-name">14.0.0</span>
+                </span></td>
+                <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_4af6975b173369a6c3c3aa21d1d62face2ab84fce3dcf5f5be19924c8963dfd8"><span class="project-version">
+                      <span class="project-name">Lodash</span> <span class="version-name">4.17.21</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_febe720a1281e9c9151d62d6bb18bd9159defb0ebb1760d1467a3a3cd66a449b"><span class="project-version">
+                      <span class="project-name">Material Design for Angular</span> <span class="version-name">14.2.7</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_0398e59bdef568b433e785a3346e91fea908439401312dc173756757a38d1523"><span class="project-version">
+                      <span class="project-name">Microsoft.AspNetCore.SpaProxy</span> <span class="version-name">8.0.6</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_e8c15799b7856da66de6cfcb57ab27228c8b89e6dcb3b0a5ea50102caced4f46"><span class="project-version">
+                      <span class="project-name">Microsoft.EntityFrameworkCore.Design</span> <span class="version-name">8.0.4</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_d1a35183b60af574091d36674baee0fab30fa44c255d4adbb7a3ac96a7bccb37"><span class="project-version">
+                      <span class="project-name">Microsoft.EntityFrameworkCore.Sqlite</span> <span class="version-name">8.0.4</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                <td class="renderable"><span class="project-version">
+                  <span class="project-name">Microsofttslib</span> <span class="version-name">2.8.1</span>
+                </span></td>
+                <td class="renderable">
+              <div class="license-name"><a href="#LIC_8ed7ceee4473aae87a8f380ac78d9b7174fe5879d4d2191c1b23d12d28c13a7e">BSD Zero Clause License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_00261ee136485f5577054f758b91cf2a5958bc7bdb42c3473702474714e43d38"><span class="project-version">
+                      <span class="project-name">NLog - Advanced .NET Logging</span> <span class="version-name">5.3.3</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_05a2cbb014c7d709d1ba236451870ba868c26fa84956eb9d8fd7ffef84d9c835">BSD 3-clause "New" or "Revised" License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_518dc34b93568affbbea7b36148482f5a979ccd1ea7b2af7a948a0399f259367"><span class="project-version">
+                      <span class="project-name">NLog.Web</span> <span class="version-name">5.3.12</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_74023e7d3ae63abb5681cb2d83efbf705f78541b482217448c05937eb7ec54f4">BSD 2-clause "Simplified" License</a></div>
+            </td>
+            </tr><tr>
+                <td class="renderable"><span class="project-version">
+                  <span class="project-name">ReactiveX RxJS</span> <span class="version-name">7.8.2</span>
+                </span></td>
+                <td class="renderable">
+              <div class="license-name"><a href="#LIC_e99dd4b311146507c3d0a887ca12e50387fe644c8aaa86cb500b50c068062543">Apache License 2.0</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_f7e183edcb7d5a95cc4543e41ebd2ca8e08188ca5091aa8709a5daf43ba5ca2e"><span class="project-version">
+                      <span class="project-name">Swashbuckle.AspNetCore</span> <span class="version-name">6.5.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_ab65a2b018bca655c4d800c0f1751e9fe62cad9877b0805363556992d41f43f0"><span class="project-version">
+                      <span class="project-name">WebCola</span> <span class="version-name">3.4.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_9e1eea297ada445cbcdc91b1843c02b5155ea019ec9ede9c1111fe72b0c41983"><span class="project-version">
+                      <span class="project-name">Zone.js</span> <span class="version-name">0.12.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_f4077deaab3f4d3edf97064e45cdf04cf11c1c9036998798ee2443db86ac5149"><span class="project-version">
+                      <span class="project-name">angular2-apollo</span> <span class="version-name">5.0.2</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_671c706891a2b2ac2e5c13783c2634cdfe7b14fedd18bd6dcb9ab49073d99618"><span class="project-version">
+                      <span class="project-name">apollographql/zen-observable-ts</span> <span class="version-name">1.2.5</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_628798423712b6774b416249d1b6555bcad4270b0751940e0ea33abbc14b7010"><span class="project-version">
+                      <span class="project-name">cpettitt/graphlib</span> <span class="version-name">v2.1.8</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_489024e3f8687d0d43fdebdf15c4de7739fa82b465c4828c33cab914b3c14aa9"><span class="project-version">
+                      <span class="project-name">d3-array</span> <span class="version-name">2.12.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_05a2cbb014c7d709d1ba236451870ba868c26fa84956eb9d8fd7ffef84d9c835">BSD 3-clause "New" or "Revised" License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_7f2cad15027fe85a7bde0fc0ae8b7cf826bfb52f27b171abcc1d46dfd81b62b8"><span class="project-version">
+                      <span class="project-name">d3-array</span> <span class="version-name">3.1.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_236c3b5246098cc3e0afcf549c013368add137394f0677b47ca101cec7c80bd7"><span class="project-version">
+                      <span class="project-name">d3-brush</span> <span class="version-name">3.0.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_ce6d5527f4d20c5a4ddeb833f0a69af6e65492da69a5ed8668775c2e5ae1f05f"><span class="project-version">
+                      <span class="project-name">d3-color</span> <span class="version-name">3.1.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_167f14eb6d124726ffad58668a221dea1aac8d7b5868d0a207e2dd9f773abddd"><span class="project-version">
+                      <span class="project-name">d3-dispatch</span> <span class="version-name">3.0.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_cca03b5b596bbddc9b73b859ddbd8990cfb9474eb0643d554229e852597b2179"><span class="project-version">
+                      <span class="project-name">d3-drag</span> <span class="version-name">3.0.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_04c2db9320f73ef21d0523608162ffc08c0a19515f71b68fa6e586c13d6e1eb2"><span class="project-version">
+                      <span class="project-name">d3-ease</span> <span class="version-name">3.0.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_05a2cbb014c7d709d1ba236451870ba868c26fa84956eb9d8fd7ffef84d9c835">BSD 3-clause "New" or "Revised" License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_cfb947a73930c9ac82f0f7b71df9d9e63c9dbae2def901c2ba09b17107d40d87"><span class="project-version">
+                      <span class="project-name">d3-force</span> <span class="version-name">3.0.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_695ccb10757cd6f1ba4dcbfafc6cb8133c15362c068b36ff784d0f00bcf670fc"><span class="project-version">
+                      <span class="project-name">d3-format</span> <span class="version-name">3.1.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_95151a5aba0f363861f986c32dca0bcf229c7eb87874bedc0bfc95cb3f5cac3b"><span class="project-version">
+                      <span class="project-name">d3-hierarchy</span> <span class="version-name">3.1.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_0d95be1b253c157cfd3589022a217fa117f7b20e50e2191221b3f06e98bfd537"><span class="project-version">
+                      <span class="project-name">d3-interpolate</span> <span class="version-name">3.0.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_a47c5a4d69db23932565c3e845af5e8debac406442b876e579dbebe5b99171d0"><span class="project-version">
+                      <span class="project-name">d3-path</span> <span class="version-name">3.1.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_9cea917a0b0ef0a761598cec380292485b45d1332d0b182f3bdb96b5c039c936"><span class="project-version">
+                      <span class="project-name">d3-quadtree</span> <span class="version-name">1.0.7</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_05a2cbb014c7d709d1ba236451870ba868c26fa84956eb9d8fd7ffef84d9c835">BSD 3-clause "New" or "Revised" License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_33d5cadc50eb937b777b1f1926d6470bd5dc6d15600156a8dd18eb1645034598"><span class="project-version">
+                      <span class="project-name">d3-scale</span> <span class="version-name">4.0.2</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_b8929d4c23bda94a28100ed53caafd37b34d9158edb19b5694ac16d2741137db"><span class="project-version">
+                      <span class="project-name">d3-selection</span> <span class="version-name">3.0.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_81112f702e53be40e557f94c9d205b14da1cb1e94abd9a869de4701561649b63"><span class="project-version">
+                      <span class="project-name">d3-shape</span> <span class="version-name">3.2.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_f009b60dca7aef86d1b30928738bd46c90e5d81b8232e0a310511e6b34680908"><span class="project-version">
+                      <span class="project-name">d3-time-format</span> <span class="version-name">3.0.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_05a2cbb014c7d709d1ba236451870ba868c26fa84956eb9d8fd7ffef84d9c835">BSD 3-clause "New" or "Revised" License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_fbbb20379974877f825a3275307a36727f751c1399c2ae0bc222e824d3f0a1f8"><span class="project-version">
+                      <span class="project-name">d3-time</span> <span class="version-name">2.1.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_05a2cbb014c7d709d1ba236451870ba868c26fa84956eb9d8fd7ffef84d9c835">BSD 3-clause "New" or "Revised" License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_95430ff689790be6fe7d5a1cce9899e1a9ae3c9a7be2e71b403a363976212c81"><span class="project-version">
+                      <span class="project-name">d3-time</span> <span class="version-name">3.1.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_7712e7574b545e0d5a8d52fcbfc007110495accedde3c86b5407e9bc1b9a00cc"><span class="project-version">
+                      <span class="project-name">d3-timer</span> <span class="version-name">3.0.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_4c4545201dbb2a113937f4706f9e66d05d40b66d3ee92095fe1b6d4916559e95"><span class="project-version">
+                      <span class="project-name">d3-transition</span> <span class="version-name">3.0.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_6f38b12db4604a1d849b2899fe92676564bd5fda142bc5193de5cfa6ac61dc08"><span class="project-version">
+                      <span class="project-name">dagre</span> <span class="version-name">v0.8.5</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_5f11a69d5e7698601743cf0c49e9729d8695cd5c322d367fe1fd257bf11b3e89"><span class="project-version">
+                      <span class="project-name">graphql-tag</span> <span class="version-name">2.12.6</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_ef68235c452af2c731af13cd776221864c11130cc2a8a5dc9156a8feef669a5b"><span class="project-version">
+                      <span class="project-name">graphql-ws</span> <span class="version-name">5.14.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_bc5e39d5574e2665d45fb9805fe00986667e47d4b883e87e1fc783a80b2b6048"><span class="project-version">
+                      <span class="project-name">graphql</span> <span class="version-name">15.7.2</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_5aa50eb1b303289a7308f5ab9bf0e61ee807d0519abbe6be7b5fce616495a221"><span class="project-version">
+                      <span class="project-name">hoist-non-react-statics</span> <span class="version-name">v3.3.2</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_05a2cbb014c7d709d1ba236451870ba868c26fa84956eb9d8fd7ffef84d9c835">BSD 3-clause "New" or "Revised" License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_77f92c6349bf590ded8f2817dde45d42e18665e3ccb7badcdd6301ace806f884"><span class="project-version">
+                      <span class="project-name">internmap</span> <span class="version-name">1.0.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_e0fb710df46f631d9215c5ec64008f25195b7c8c5c490823b3a0b291ed895417"><span class="project-version">
+                      <span class="project-name">internmap</span> <span class="version-name">2.0.3</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_230e536038f542c1915760df5b2981adb621636d5ba83341654e7826327690b3"><span class="project-version">
+                      <span class="project-name">is-any-array</span> <span class="version-name">0.1.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_6b3f88eb44ac42a092f72fa07fa1de7302501a52d81c5e35a8b52e0a4607d040"><span class="project-version">
+                      <span class="project-name">is-any-array</span> <span class="version-name">2.0.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_e7115041da7c18bfc062b9693978fdf6c63ca927d2f6f707d4b819f86879c93e"><span class="project-version">
+                      <span class="project-name">js-tokens</span> <span class="version-name">4.0.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_ff14c73222fb008f4987096c6af4dc4873ac733cb5ea3133f96fceecabca5d38"><span class="project-version">
+                      <span class="project-name">json5</span> <span class="version-name">2.2.3</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_ac4288babed7474844ffee1ac69922ed7d32b785021ecd7d632296a11d1bf891"><span class="project-version">
+                      <span class="project-name">loose-envify</span> <span class="version-name">1.4.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_2c3ac8a51dafccb74ddf54451d8f1ec77e381f93ce3e5515b4b1bf41a9b88f30"><span class="project-version">
+                      <span class="project-name">ml-array-min</span> <span class="version-name">1.2.3</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_05ca4965dafde14b4126ce5d05eccf3c3dace391fa4beddd51d2293ad23b3e10"><span class="project-version">
+                      <span class="project-name">ml-array-min</span> <span class="version-name">1.2.4</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_be8eabb248b56caeb93c43c99bbb5f1c2289d5a16a124c571019d497713e31e2"><span class="project-version">
+                      <span class="project-name">ml-array-min</span> <span class="version-name">1.3.7</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                <td class="renderable"><span class="project-version">
+                  <span class="project-name">ml-levenberg-marquardt</span> <span class="version-name">2.1.1</span>
+                </span></td>
+                <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                <td class="renderable"><span class="project-version">
+                  <span class="project-name">ml-matrix</span> <span class="version-name">6.12.1</span>
+                </span></td>
+                <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_8dfafa177ef855aa9170742bd466eb0621b2be3cb532cdf9f26cd97183e5927e"><span class="project-version">
+                      <span class="project-name">moment/moment</span> <span class="version-name">2.30.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_6be48843cc998ed88ac8101119d466a1095d90f335b933699dbcc40487b21c02"><span class="project-version">
+                      <span class="project-name">ngx-translate/core</span> <span class="version-name">14.0.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_3e0693054335e4693548ae21b678a483fed415f29a22419f60557e7ed4681a8d"><span class="project-version">
+                      <span class="project-name">object-assign</span> <span class="version-name">4.1.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_04d8b1039509e54ad03729c296fb013d87cc06045c09e2b491b3aeee6acccc91"><span class="project-version">
+                      <span class="project-name">optimism</span> <span class="version-name">0.17.5</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_ecdc9e34cc528819dd7fee952f4dbe48128c5adf1fa957a13f8dad4b400f540a"><span class="project-version">
+                      <span class="project-name">parse5</span> <span class="version-name">5.1.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                <td class="renderable"><span class="project-version">
+                  <span class="project-name">prando</span> <span class="version-name">6.0.1</span>
+                </span></td>
+                <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_05f4081dd6e735a7006e93a34bcec67e2c31427ff21cbdb8b2da44cf73479cf4"><span class="project-version">
+                      <span class="project-name">prop-types</span> <span class="version-name">15.8.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_66b86810b2b598708f24a18355b7f5acc7f60f60c35e4a68ac88dd8cd0fd12a2"><span class="project-version">
+                      <span class="project-name">react-is</span> <span class="version-name">16.13.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                <td class="renderable"><span class="project-version">
+                  <span class="project-name">response-iterator</span> <span class="version-name">0.2.20</span>
+                </span></td>
+                <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_6edef33d5c9b2b14b57cc0b8152e106d8f87d89e4f1091912950f0dc6bac64fe"><span class="project-version">
+                      <span class="project-name">rfdc</span> <span class="version-name">1.4.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_b1b26d556d09e91e52f4d79089b3b6c8ba9aed91f6f75336bb506b7dde0bf513"><span class="project-version">
+                      <span class="project-name">swimlane - ngx-charts</span> <span class="version-name">20.4.1</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_1a361e76c30f82cbd9f1630297ee325cadabe82802db97be09c2b3269d28fc97"><span class="project-version">
+                      <span class="project-name">symbol-observable</span> <span class="version-name">4.0.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_60f1ca4311b77db02c4a1b6383142ccf3e29ebd1027eadaddbfacde789270101"><span class="project-version">
+                      <span class="project-name">transformation-matrix</span> <span class="version-name">1.15.3</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_92932cb8eefb7d483f226211de9032661ec889e4898d49aa8d9ff18ed3643496"><span class="project-version">
+                      <span class="project-name">ts-invariant</span> <span class="version-name">0.10.3</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_22b6e3d8831d62eaff4bd383f368fa3f13c393dd7bfc7b3a6701186eaa925cd3"><span class="project-version">
+                      <span class="project-name">umap-js</span> <span class="version-name">1.4.0</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr><tr>
+                    <td class="renderable"><a href="#COM_bdd0f83fabeb8430f60a33375ce91b6d848e15f71df0a93c15ca7e8d0ef06abc"><span class="project-version">
+                      <span class="project-name">zen-observable</span> <span class="version-name">0.8.15</span>
+                    </span></a></td>
+                    <td class="renderable">
+              <div class="license-name"><a href="#LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</a></div>
+            </td>
+            </tr>
+          <!--
+          <tr>
+            <td class="renderable"><span class="project-version"><span class="project-name">@angular/animations</span><span
+                  class="version-name">10.2.4</span></span></td>
+            <td class="renderable">
+              <div class="license-name">MIT License</div>
+            </td>
+          </tr>
+          -->
+        </tbody>
+      </table>
+      <h1 id="Licenses">Licenses</h1>
+      <h2 id="LIC_e99dd4b311146507c3d0a887ca12e50387fe644c8aaa86cb500b50c068062543">Apache License 2.0</h2>
+                <div class="license-component-details text-muted">ReactiveX RxJS 7.8.2</div>
+                <pre>Apache License
+Version 2.0, January 2004
+=========================
+
+
+http://www.apache.org/licenses/
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+1. Definitions.
+
+"License" shall mean the terms and conditions for use, reproduction, and
+distribution as defined by Sections 1 through 9 of this document.
+
+"Licensor" shall mean the copyright owner or entity authorized by the copyright
+owner that is granting the License.
+
+"Legal Entity" shall mean the union of the acting entity and all other entities
+that control, are controlled by, or are under common control with that entity.
+For the purposes of this definition, "control" means (i) the power, direct or
+indirect, to cause the direction or management of such entity, whether by
+contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the
+outstanding shares, or (iii) beneficial ownership of such entity.
+
+"You" (or "Your") shall mean an individual or Legal Entity exercising permissions
+granted by this License.
+
+"Source" form shall mean the preferred form for making modifications, including
+but not limited to software source code, documentation source, and configuration
+files.
+
+"Object" form shall mean any form resulting from mechanical transformation or
+translation of a Source form, including but not limited to compiled object code,
+generated documentation, and conversions to other media types.
+
+"Work" shall mean the work of authorship, whether in Source or Object form, made
+available under the License, as indicated by a copyright notice that is included
+in or attached to the work (an example is provided in the Appendix below).
+
+"Derivative Works" shall mean any work, whether in Source or Object form, that is
+based on (or derived from) the Work and for which the editorial revisions,
+annotations, elaborations, or other modifications represent, as a whole, an
+original work of authorship. For the purposes of this License, Derivative Works
+shall not include works that remain separable from, or merely link (or bind by
+name) to the interfaces of, the Work and Derivative Works thereof.
+
+"Contribution" shall mean any work of authorship, including the original version
+of the Work and any modifications or additions to that Work or Derivative Works
+thereof, that is intentionally submitted to Licensor for inclusion in the Work by
+the copyright owner or by an individual or Legal Entity authorized to submit on
+behalf of the copyright owner. For the purposes of this definition, "submitted"
+means any form of electronic, verbal, or written communication sent to the
+Licensor or its representatives, including but not limited to communication on
+electronic mailing lists, source code control systems, and issue tracking systems
+that are managed by, or on behalf of, the Licensor for the purpose of discussing
+and improving the Work, but excluding communication that is conspicuously marked
+or otherwise designated in writing by the copyright owner as "Not a
+Contribution."
+
+"Contributor" shall mean Licensor and any individual or Legal Entity on behalf of
+whom a Contribution has been received by Licensor and subsequently incorporated
+within the Work.
+
+2. Grant of Copyright License. Subject to the terms and conditions of this
+License, each Contributor hereby grants to You a perpetual, worldwide,
+non-exclusive, no-charge, royalty-free, irrevocable copyright license to
+reproduce, prepare Derivative Works of, publicly display, publicly perform,
+sublicense, and distribute the Work and such Derivative Works in Source or Object
+form.
+
+3. Grant of Patent License. Subject to the terms and conditions of this License,
+each Contributor hereby grants to You a perpetual, worldwide, non-exclusive,
+no-charge, royalty-free, irrevocable (except as stated in this section) patent
+license to make, have made, use, offer to sell, sell, import, and otherwise
+transfer the Work, where such license applies only to those patent claims
+licensable by such Contributor that are necessarily infringed by their
+Contribution(s) alone or by combination of their Contribution(s) with the Work to
+which such Contribution(s) was submitted. If You institute patent litigation
+against any entity (including a cross-claim or counterclaim in a lawsuit)
+alleging that the Work or a Contribution incorporated within the Work constitutes
+direct or contributory patent infringement, then any patent licenses granted to
+You under this License for that Work shall terminate as of the date such
+litigation is filed.
+
+4. Redistribution. You may reproduce and distribute copies of the Work or
+Derivative Works thereof in any medium, with or without modifications, and in
+Source or Object form, provided that You meet the following conditions:
+
+  a. You must give any other recipients of the Work or Derivative Works a copy of
+    this License; and
+
+  b. You must cause any modified files to carry prominent notices stating that
+    You changed the files; and
+
+  c. You must retain, in the Source form of any Derivative Works that You
+    distribute, all copyright, patent, trademark, and attribution notices from
+    the Source form of the Work, excluding those notices that do not pertain to
+    any part of the Derivative Works; and
+
+  d. If the Work includes a "NOTICE" text file as part of its distribution, then
+    any Derivative Works that You distribute must include a readable copy of the
+    attribution notices contained within such NOTICE file, excluding those
+    notices that do not pertain to any part of the Derivative Works, in at least
+    one of the following places: within a NOTICE text file distributed as part of
+    the Derivative Works; within the Source form or documentation, if provided
+    along with the Derivative Works; or, within a display generated by the
+    Derivative Works, if and wherever such third-party notices normally appear.
+    The contents of the NOTICE file are for informational purposes only and do
+    not modify the License. You may add Your own attribution notices within
+    Derivative Works that You distribute, alongside or as an addendum to the
+    NOTICE text from the Work, provided that such additional attribution notices
+    cannot be construed as modifying the License.
+
+You may add Your own copyright statement to Your modifications and may provide
+additional or different license terms and conditions for use, reproduction, or
+distribution of Your modifications, or for any such Derivative Works as a whole,
+provided Your use, reproduction, and distribution of the Work otherwise complies
+with the conditions stated in this License.
+
+5. Submission of Contributions. Unless You explicitly state otherwise, any
+Contribution intentionally submitted for inclusion in the Work by You to the
+Licensor shall be under the terms and conditions of this License, without any
+additional terms or conditions. Notwithstanding the above, nothing herein shall
+supersede or modify the terms of any separate license agreement you may have
+executed with Licensor regarding such Contributions.
+
+6. Trademarks. This License does not grant permission to use the trade names,
+trademarks, service marks, or product names of the Licensor, except as required
+for reasonable and customary use in describing the origin of the Work and
+reproducing the content of the NOTICE file.
+
+7. Disclaimer of Warranty. Unless required by applicable law or agreed to in
+writing, Licensor provides the Work (and each Contributor provides its
+Contributions) on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+either express or implied, including, without limitation, any warranties or
+conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+PARTICULAR PURPOSE. You are solely responsible for determining the
+appropriateness of using or redistributing the Work and assume any risks
+associated with Your exercise of permissions under this License.
+
+8. Limitation of Liability. In no event and under no legal theory, whether in
+tort (including negligence), contract, or otherwise, unless required by
+applicable law (such as deliberate and grossly negligent acts) or agreed to in
+writing, shall any Contributor be liable to You for damages, including any
+direct, indirect, special, incidental, or consequential damages of any character
+arising as a result of this License or out of the use or inability to use the
+Work (including but not limited to damages for loss of goodwill, work stoppage,
+computer failure or malfunction, or any and all other commercial damages or
+losses), even if such Contributor has been advised of the possibility of such
+damages.
+
+9. Accepting Warranty or Additional Liability. While redistributing the Work or
+Derivative Works thereof, You may choose to offer, and charge a fee for,
+acceptance of support, warranty, indemnity, or other liability obligations and/or
+rights consistent with this License. However, in accepting such obligations, You
+may act only on Your own behalf and on Your sole responsibility, not on behalf of
+any other Contributor, and only if You agree to indemnify, defend, and hold each
+Contributor harmless for any liability incurred by, or claims asserted against,
+such Contributor by reason of your accepting any such warranty or additional
+liability.
+
+END OF TERMS AND CONDITIONS
+
+APPENDIX: How to apply the Apache License to your work
+
+To apply the Apache License to your work, attach the following boilerplate
+notice, with the fields enclosed by brackets "[]" replaced with your own
+identifying information. (Don't include the brackets!) The text should be
+enclosed in the appropriate comment syntax for the file format. We also recommend
+that a file or class name and description of purpose be included on the same
+"printed page" as the copyright notice for easier identification within
+third-party archives.
+
+  Copyright [yyyy] [name of copyright owner] Licensed under the Apache License,
+  Version 2.0 (the "License"); you may not use this file except in compliance
+  with the License. You may obtain a copy of the License at
+  http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law
+  or agreed to in writing, software distributed under the License is
+  distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  KIND, either express or implied. See the License for the specific language
+  governing permissions and limitations under the License.</pre>
+                <h2 id="LIC_74023e7d3ae63abb5681cb2d83efbf705f78541b482217448c05937eb7ec54f4">BSD 2-clause "Simplified" License</h2>
+                <div class="license-component-details text-muted">NLog.Web 5.3.12</div>
+                <pre>BSD Two Clause License
+======================
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+  1. Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+  2. Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGE.</pre>
+                <h2 id="LIC_05a2cbb014c7d709d1ba236451870ba868c26fa84956eb9d8fd7ffef84d9c835">BSD 3-clause "New" or "Revised" License</h2>
+                <div class="license-component-details text-muted">NLog - Advanced .NET Logging 5.3.3, d3-array 2.12.1, d3-ease 3.0.1, d3-quadtree 1.0.7, d3-time-format 3.0.0, d3-time 2.1.1, hoist-non-react-statics v3.3.2</div>
+                <pre>Copyright (c) &lt;YEAR&gt;, &lt;OWNER&gt;
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+  * Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+
+  * Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+  * Neither the name of the &lt;ORGANIZATION&gt; nor the names of its contributors may
+    be used to endorse or promote products derived from this software without
+    specific prior written permission.
+
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS
+OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</pre>
+                <h2 id="LIC_8ed7ceee4473aae87a8f380ac78d9b7174fe5879d4d2191c1b23d12d28c13a7e">BSD Zero Clause License</h2>
+                <div class="license-component-details text-muted">Microsofttslib 2.8.1</div>
+                <pre>BSD Zero Clause License
+=======================
+
+Copyright (C) 2006 by Rob Landley &lt;rob@landley.net&gt;
+
+Permission to use, copy, modify, and/or distribute this software for any purpose
+with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
+THIS SOFTWARE.</pre>
+                <h2 id="LIC_216cb0412b464c1dbcef25d177237a9fb56d6eac94ddb6ca068c9f091a08eeff">ISC License</h2>
+                <div class="license-component-details text-muted">d3-array 3.1.1, d3-brush 3.0.0, d3-color 3.1.0, d3-dispatch 3.0.1, d3-drag 3.0.0, d3-force 3.0.0, d3-format 3.1.0, d3-hierarchy 3.1.0, d3-interpolate 3.0.1, d3-path 3.1.0, d3-scale 4.0.2, d3-selection 3.0.0, d3-shape 3.2.0, d3-time 3.1.0, d3-timer 3.0.1, d3-transition 3.0.1, internmap 1.0.1, internmap 2.0.3</div>
+                <pre>ISC License (ISCL)
+==================
+
+Copyright (c) 4-digit year, Company or Person's Name
+
+Permission to use, copy, modify, and/or distribute this software for any purpose
+with or without fee is hereby granted, provided that the above copyright notice
+and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS
+OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
+THIS SOFTWARE.</pre>
+                <h2 id="LIC_abb2896dc3c2a9402f901b88d5035cf0a83d5cf7c17e73642cdf562b0b9d3bc5">MIT License</h2>
+                <div class="license-component-details text-muted">@angular-material-components/datetime-picker 8.0.0, @angular-material-components/moment-adapter 8.0.0, @angular/animations 14.2.12, @angular/cdk 14.2.7, @angular/common 14.2.12, @angular/compiler 14.2.12, @angular/flex-layout 14.0.0-beta.41, @angular/forms 14.2.12, @angular/platform-browser-dynamic 14.2.12, @angular/platform-browser 14.2.12, @angular/router 14.2.12, @apollo/client 3.8.1, @auth0/angular-jwt 5.2.0, @fontsource/roboto 4.5.8, @graphql-typed-document-node/core 3.2.0, @ngx-translate/http-loader 7.0.0, @swimlane/ngx-graph 8.2.2, @wry/context 0.7.4, @wry/equality 0.5.7, @wry/trie 0.4.3, Angular 14.2.12, ChilliCream/hotchocolate 14.0.0, HotChocolate.AspNetCore 14.0.0, Lodash 4.17.21, Material Design for Angular 14.2.7, Microsoft.AspNetCore.SpaProxy 8.0.6, Microsoft.EntityFrameworkCore.Design 8.0.4, Microsoft.EntityFrameworkCore.Sqlite 8.0.4, Swashbuckle.AspNetCore 6.5.0, WebCola 3.4.0, Zone.js 0.12.0, angular2-apollo 5.0.2, apollographql/zen-observable-ts 1.2.5, cpettitt/graphlib v2.1.8, dagre v0.8.5, graphql-tag 2.12.6, graphql-ws 5.14.0, graphql 15.7.2, is-any-array 0.1.1, is-any-array 2.0.1, js-tokens 4.0.0, json5 2.2.3, loose-envify 1.4.0, ml-array-min 1.2.3, ml-array-min 1.2.4, ml-array-min 1.3.7, ml-levenberg-marquardt 2.1.1, ml-matrix 6.12.1, moment/moment 2.30.1, ngx-translate/core 14.0.0, object-assign 4.1.1, optimism 0.17.5, parse5 5.1.1, prando 6.0.1, prop-types 15.8.1, react-is 16.13.1, response-iterator 0.2.20, rfdc 1.4.1, swimlane - ngx-charts 20.4.1, symbol-observable 4.0.0, transformation-matrix 1.15.3, ts-invariant 0.10.3, umap-js 1.4.0, zen-observable 0.8.15</div>
+                <pre>The MIT License
+===============
+
+Copyright (c) &lt;year&gt; &lt;copyright holders&gt;
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in the
+Software without restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</pre>
+                <h1 id="CopyAndNotice">Copyright Data and Notices</h1>
+      <h2 id="COM_bc1dc546b6ea686df547fabc33006e61aa781252e323f92bfaa75730963f083a">@angular-material-components/datetime-picker 8.0.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2020 HO Hong Quan</li>
+                    <li class="copyright">Copyright Google LLC All Rights Reserved</li>
+                    </ul>
+                <h2 id="COM_fcd24fb0c8776cf9858393ecb9819893935b0212799d728d9ebad8be1a41f19d">@angular-material-components/moment-adapter 8.0.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright Google LLC All Rights Reserved</li>
+                    </ul>
+                <h2 id="COM_6df29f7dc46d1f995a1073ed717a9ddbbe2947a5a27774ed770c0d9c3cae3c49">@angular/animations 14.2.12</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">(c) 2010-2022 Google LLC. https://angular.io/</li>
+                    <li class="copyright">Copyright Google LLC All Rights Reserved</li>
+                    </ul>
+                <h2 id="COM_95b788951ecb5ca9439cebb8584c451ec2b5982768f4a56b374b18c7d41302d8">@angular/cdk 14.2.7</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2022 Google LLC.</li>
+                    <li class="copyright">Copyright Google LLC All Rights Reserved</li>
+                    </ul>
+                <h2 id="COM_4b4273105a3fc5261e351ef37fb9fee241d9d8842d31a7ae91edde2b689db602">@angular/common 14.2.12</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">(c) 2010-2022 Google LLC. https://angular.io/</li>
+                    <li class="copyright">Copyright Google LLC All Rights Reserved</li>
+                    </ul>
+                <h2 id="COM_a0e37b6146d00b60f0f14aaa2f7f1e5e587fa49f17e5ce5e3273c8ed5e045707">@angular/compiler 14.2.12</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">(c) 2010-2022 Google LLC. https://angular.io/</li>
+                    <li class="copyright">Copyright Google LLC All Rights Reserved</li>
+                    </ul>
+                <h2 id="COM_465069681b992ecb28778929e33680dae7ff17724c709f9a0070c9c87eeed2a9">@angular/flex-layout 14.0.0-beta.41</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright Google LLC All Rights Reserved</li>
+                    </ul>
+                <h2 id="COM_c58797bd4cc0e16e0673ed555dc6e9a76c91d83b47f15973db6cec3667d4f810">@angular/forms 14.2.12</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">(c) 2010-2022 Google LLC. https://angular.io/</li>
+                    <li class="copyright">Copyright Google LLC All Rights Reserved</li>
+                    </ul>
+                <h2 id="COM_86842d4d1af350434a53cb56c4393a87f6a3253abb1790bdc19e9a40e1f75493">@angular/platform-browser-dynamic 14.2.12</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">(c) 2010-2022 Google LLC. https://angular.io/</li>
+                    <li class="copyright">Copyright Google LLC All Rights Reserved</li>
+                    </ul>
+                <h2 id="COM_f937b1b1ba464ee28692f5ba7cad5722396ecc1d289be8cf6182b26855696823">@angular/platform-browser 14.2.12</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">(c) 2010-2022 Google LLC. https://angular.io/</li>
+                    <li class="copyright">Copyright Google LLC All Rights Reserved</li>
+                    </ul>
+                <h2 id="COM_006d91a367c6f4f67f758bcf8e26533a4208d68da8f554a6381b74bfaee72034">@angular/router 14.2.12</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">(c) 2010-2022 Google LLC. https://angular.io/</li>
+                    <li class="copyright">Copyright Google LLC All Rights Reserved</li>
+                    </ul>
+                <h2 id="COM_70958cde6b0f52974184d334efdcd01915a88d477c221b0a689afbc3f1845240">@apollo/client 3.8.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2022 Apollo Graph, Inc. (Formerly Meteor Development Group, Inc.)</li>
+                    </ul>
+                <h2 id="COM_15f7f95ab4804ed304d1d17dcbc11619e9f7d4ebeacb62ee1c4a52105ce7cae8">@auth0/angular-jwt 5.2.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2017 Auth0 Inc.</li>
+                    </ul>
+                <h2 id="COM_f9253352802b6b06e73cf9e3a0bbceb6940acae5d5d6b2c88fe61f3ed56f08ea">@graphql-typed-document-node/core 3.2.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2020-2023 Dotan Simha</li>
+                    </ul>
+                <h2 id="COM_9627eec9d12814514f8c9b87a7cbab9519d475b53701f653756c75153c6aee36">@swimlane/ngx-graph 8.2.2</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2016 Swimlane </li>
+                    </ul>
+                <h2 id="COM_93dae4a227477950216847681b9c6b967b2c518c8607438a9f22418f68af333a">@wry/equality 0.5.7</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2019 Ben Newman</li>
+                    </ul>
+                <h2 id="COM_61d4e6fcf7801787b5a244cfcb0a4207c1e84fd71f6fb00d3120d3a205477a89">Angular 14.2.12</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">(c) 2010-2022 Google LLC. https://angular.io/</li>
+                    <li class="copyright">Copyright Google LLC All Rights Reserved</li>
+                    </ul>
+                <h2 id="COM_4af6975b173369a6c3c3aa21d1d62face2ab84fce3dcf5f5be19924c8963dfd8">Lodash 4.17.21</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters (function(){function n(n,t,r){switch(r.length){case 0:return n.call(t);case 1:return n.call(t,r[0]);case 2:return n.call(t,r[0],r[1</li>
+                    <li class="copyright">Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters ;(function() {</li>
+                    <li class="copyright">Copyright OpenJS Foundation and other contributors </li>
+                    <li class="copyright">copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters &amp; Editors </li>
+                    </ul>
+                <h2 id="COM_febe720a1281e9c9151d62d6bb18bd9159defb0ebb1760d1467a3a3cd66a449b">Material Design for Angular 14.2.7</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2022 Google LLC.</li>
+                    <li class="copyright">Copyright Google LLC All Rights Reserved</li>
+                    </ul>
+                <h2 id="COM_0398e59bdef568b433e785a3346e91fea908439401312dc173756757a38d1523">Microsoft.AspNetCore.SpaProxy 8.0.6</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (C) 2000-2013 Julian Seward. All rights reserved</li>
+                    <li class="copyright">Copyright (c) .NET Foundation Contributors</li>
+                    <li class="copyright">Copyright (c) .NET Foundation and Contributors All rights reserved</li>
+                    <li class="copyright">Copyright (c) 1989, 1993 The Regents of the University of California. All rights reserved</li>
+                    <li class="copyright">Copyright (c) 1990, 1993 The Regents of the University of California. All rights reserved</li>
+                    <li class="copyright">Copyright (c) 1996-1998 John D. Polstra. All rights reserved</li>
+                    <li class="copyright">Copyright (c) 1998 John D. Polstra. All rights reserved</li>
+                    <li class="copyright">Copyright (c) 2007 James Newton-King</li>
+                    <li class="copyright">Copyright (c) 2007 John Birrell (jb@freebsd.org) All rights reserved</li>
+                    <li class="copyright">Copyright (c) 2010-2019 Google LLC. http://angular.io/license</li>
+                    <li class="copyright">Copyright (c) 2011 Alex MacCaw (info@eribium.org)</li>
+                    <li class="copyright">Copyright (c) 2011 Nicolas Gallagher (nicolas@nicolasgallagher.com)</li>
+                    <li class="copyright">Copyright (c) 2011-2021 The Bootstrap Authors</li>
+                    <li class="copyright">Copyright (c) 2011-2021 Twitter, Inc.</li>
+                    <li class="copyright">Copyright (c) 2013 - 2018 AngleSharp</li>
+                    <li class="copyright">Copyright (c) 2013-2017, Milosz Krajewski All rights reserved</li>
+                    <li class="copyright">Copyright (c) 2014-2018 Michael Daines</li>
+                    <li class="copyright">Copyright (c) 2015, Google Inc.</li>
+                    <li class="copyright">Copyright (c) 2016 Richard Morris</li>
+                    <li class="copyright">Copyright (c) 2017 Yoshifumi Kawai</li>
+                    <li class="copyright">Copyright (c) 2019 David Fowler</li>
+                    <li class="copyright">Copyright (c) 2019-2020 West Wind Technologies</li>
+                    <li class="copyright">Copyright (c) 2019-2023 The Bootstrap Authors</li>
+                    <li class="copyright">Copyright (c) Andrew Arnott</li>
+                    <li class="copyright">Copyright (c) HTML5 Boilerplate</li>
+                    <li class="copyright">Copyright (c) Microsoft Corporation. All rights reserved</li>
+                    <li class="copyright">Copyright (c) Sindre Sorhus </li>
+                    <li class="copyright">Copyright (c)Nicolas Gallagher and Jonathan Neal</li>
+                    <li class="copyright">Copyright 2019 The gRPC Authors</li>
+                    <li class="copyright">Copyright OpenJS Foundation and other contributors, https://openjsf.org/</li>
+                    <li class="copyright">Copyright {yyyy</li>
+                    </ul>
+                <h2 id="COM_e8c15799b7856da66de6cfcb57ab27228c8b89e6dcb3b0a5ea50102caced4f46">Microsoft.EntityFrameworkCore.Design 8.0.4</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) Microsoft Corporation. All rights reserved.</li>
+                    </ul>
+                <h2 id="COM_d1a35183b60af574091d36674baee0fab30fa44c255d4adbb7a3ac96a7bccb37">Microsoft.EntityFrameworkCore.Sqlite 8.0.4</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) Microsoft Corporation. All rights reserved.</li>
+                    </ul>
+                <h2 id="COM_00261ee136485f5577054f758b91cf2a5958bc7bdb42c3473702474714e43d38">NLog - Advanced .NET Logging 5.3.3</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2004-2024 NLog Project - https://nlog-project.org/</li>
+                    </ul>
+                <h2 id="COM_518dc34b93568affbbea7b36148482f5a979ccd1ea7b2af7a948a0399f259367">NLog.Web 5.3.12</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2015-2024 NLog Project - https://nlog-project.org/</li>
+                    </ul>
+                <h2 id="COM_f7e183edcb7d5a95cc4543e41ebd2ca8e08188ca5091aa8709a5daf43ba5ca2e">Swashbuckle.AspNetCore 6.5.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2016 Richard Morris</li>
+                    </ul>
+                <h2 id="COM_ab65a2b018bca655c4d800c0f1751e9fe62cad9877b0805363556992d41f43f0">WebCola 3.4.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2013 Tim Dwyer</li>
+                    </ul>
+                <h2 id="COM_9e1eea297ada445cbcdc91b1843c02b5155ea019ec9ede9c1111fe72b0c41983">Zone.js 0.12.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">(c) 2010-2022 Google LLC. https://angular.io/</li>
+                    <li class="copyright">Copyright (c) 2010-2022 Google LLC. https://angular.io/license</li>
+                    <li class="copyright">Copyright Google LLC All Rights Reserved</li>
+                    </ul>
+                <h2 id="COM_f4077deaab3f4d3edf97064e45cdf04cf11c1c9036998798ee2443db86ac5149">angular2-apollo 5.0.2</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2015 - 2020 Kamil Kisiela</li>
+                    </ul>
+                <h2 id="COM_671c706891a2b2ac2e5c13783c2634cdfe7b14fedd18bd6dcb9ab49073d99618">apollographql/zen-observable-ts 1.2.5</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2021 Apollo Graph, Inc. (Formerly Meteor Development Group, Inc.)</li>
+                    </ul>
+                <h2 id="COM_628798423712b6774b416249d1b6555bcad4270b0751940e0ea33abbc14b7010">cpettitt/graphlib v2.1.8</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2012-2014 Chris Pettitt</li>
+                    <li class="copyright">Copyright (c) 2014, Chris Pettitt All rights reserved</li>
+                    </ul>
+                <h2 id="COM_489024e3f8687d0d43fdebdf15c4de7739fa82b465c4828c33cab914b3c14aa9">d3-array 2.12.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright ${(new Date).getFullYear() globals: Object.assign({}, ...Object.keys(meta.dependencies || {}).filter(key =</li>
+                    <li class="copyright">Copyright 2010-2020 Mike Bostock All rights reserved</li>
+                    <li class="copyright">Copyright 2018 Vladimir Agafonkin. export default function quickselect(array, k, left = 0, right = array.length - 1, compare = ascending) { while (right </li>
+                    <li class="copyright">Copyright 2018 Vladimir Agafonkin. function quickselect(array, k, left = 0, right = array.length - 1, compare = ascending) { while (right </li>
+                    <li class="copyright">Copyright 2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2021 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports) :</li>
+                    </ul>
+                <h2 id="COM_7f2cad15027fe85a7bde0fc0ae8b7cf826bfb52f27b171abcc1d46dfd81b62b8">d3-array 3.1.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2010-2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports) :</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and th</li>
+                    <li class="copyright">Copyright 2018 Vladimir Agafonkin. export default function quickselect(array, k, left = 0, right = array.length - 1, compare) { compare = compare === undefined ? ascendingDefined : compareDefined(comp</li>
+                    <li class="copyright">Copyright 2018 Vladimir Agafonkin. function quickselect(array, k, left = 0, right = array.length - 1, compare) { compare = compare === undefined ? ascendingDefined : compareDefined(compare); while (ri</li>
+                    </ul>
+                <h2 id="COM_236c3b5246098cc3e0afcf549c013368add137394f0677b47ca101cec7c80bd7">d3-brush 3.0.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2010-2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports, require('d3-dispatch'), require('d3-drag'), require('d3-i</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and th</li>
+                    </ul>
+                <h2 id="COM_ce6d5527f4d20c5a4ddeb833f0a69af6e65492da69a5ed8668775c2e5ae1f05f">d3-color 3.1.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2010-2022 Mike Bostock</li>
+                    <li class="copyright">Copyright 2010-2022 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports) :</li>
+                    <li class="copyright">Copyright 2010-2022 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and th</li>
+                    </ul>
+                <h2 id="COM_167f14eb6d124726ffad58668a221dea1aac8d7b5868d0a207e2dd9f773abddd">d3-dispatch 3.0.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2010-2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports) :</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and th</li>
+                    </ul>
+                <h2 id="COM_cca03b5b596bbddc9b73b859ddbd8990cfb9474eb0643d554229e852597b2179">d3-drag 3.0.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2010-2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports, require('d3-dispatch'), require('d3-selection')) :</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and th</li>
+                    </ul>
+                <h2 id="COM_04c2db9320f73ef21d0523608162ffc08c0a19515f71b68fa6e586c13d6e1eb2">d3-ease 3.0.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2001 Robert Penner All rights reserved</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock, 2001 Robert Penner</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock, 2001 Robert Penner (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports) :</li>
+                    </ul>
+                <h2 id="COM_cfb947a73930c9ac82f0f7b71df9d9e63c9dbae2def901c2ba09b17107d40d87">d3-force 3.0.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2010-2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports, require('d3-quadtree'), require('d3-dispatch'), require('</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and th</li>
+                    </ul>
+                <h2 id="COM_695ccb10757cd6f1ba4dcbfafc6cb8133c15362c068b36ff784d0f00bcf670fc">d3-format 3.1.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2010-2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports) :</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and th</li>
+                    </ul>
+                <h2 id="COM_95151a5aba0f363861f986c32dca0bcf229c7eb87874bedc0bfc95cb3f5cac3b">d3-hierarchy 3.1.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2010-2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports) :</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and th</li>
+                    </ul>
+                <h2 id="COM_0d95be1b253c157cfd3589022a217fa117f7b20e50e2191221b3f06e98bfd537">d3-interpolate 3.0.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright ${copyright globals: Object.assign({}, ...Object.keys(meta.dependencies || {}).filter(key =</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports, require('d3-color')) :</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and th</li>
+                    <li class="copyright">Copyrights .join(", "); function onwarn(message, warn) { if (message.code === "CIRCULAR_DEPENDENCY") return; warn(message);</li>
+                    <li class="copyright">copyright = readFileSync("./LICENSE", "utf-8") .split(/ /g)</li>
+                    </ul>
+                <h2 id="COM_a47c5a4d69db23932565c3e845af5e8debac406442b876e579dbebe5b99171d0">d3-path 3.1.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2015-2022 Mike Bostock</li>
+                    <li class="copyright">Copyright 2015-2022 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports) :</li>
+                    <li class="copyright">Copyright 2015-2022 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and th</li>
+                    </ul>
+                <h2 id="COM_9cea917a0b0ef0a761598cec380292485b45d1332d0b182f3bdb96b5c039c936">d3-quadtree 1.0.7</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2010-2016 Mike Bostock All rights reserved</li>
+                    <li class="copyright">Copyright 2019 Mike Bostock</li>
+                    <li class="copyright">Copyright 2019 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports) :</li>
+                    </ul>
+                <h2 id="COM_33d5cadc50eb937b777b1f1926d6470bd5dc6d15600156a8dd18eb1645034598">d3-scale 4.0.2</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2010-2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports, require('d3-array'), require('d3-interpolate'), require('</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and th</li>
+                    </ul>
+                <h2 id="COM_b8929d4c23bda94a28100ed53caafd37b34d9158edb19b5694ac16d2741137db">d3-selection 3.0.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2010-2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports) :</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and th</li>
+                    </ul>
+                <h2 id="COM_81112f702e53be40e557f94c9d205b14da1cb1e94abd9a869de4701561649b63">d3-shape 3.2.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2010-2022 Mike Bostock</li>
+                    <li class="copyright">Copyright 2010-2022 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports, require('d3-path')) :</li>
+                    <li class="copyright">Copyright 2010-2022 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and th</li>
+                    </ul>
+                <h2 id="COM_f009b60dca7aef86d1b30928738bd46c90e5d81b8232e0a310511e6b34680908">d3-time-format 3.0.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2010-2017 Mike Bostock All rights reserved</li>
+                    <li class="copyright">Copyright 2020 Mike Bostock</li>
+                    <li class="copyright">Copyright 2020 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports, require('d3-time')) :</li>
+                    </ul>
+                <h2 id="COM_fbbb20379974877f825a3275307a36727f751c1399c2ae0bc222e824d3f0a1f8">d3-time 2.1.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2010-2016 Mike Bostock All rights reserved</li>
+                    <li class="copyright">Copyright 2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2021 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports, require('d3-array')) :</li>
+                    <li class="copyright">Copyright: 2010-2016 Mike Bostock (http://bost.ocks.org/mike)</li>
+                    <li class="copyright">Copyright: 2017 Pirate Praveen </li>
+                    <li class="copyright">copyright-format/1.0/ Upstream-Name: d3-time Upstream-Contact: https://github.com/d3/d3-time/issues Source: https://d3js.org/d3-time/ Files:</li>
+                    </ul>
+                <h2 id="COM_95430ff689790be6fe7d5a1cce9899e1a9ae3c9a7be2e71b403a363976212c81">d3-time 3.1.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2010-2022 Mike Bostock</li>
+                    <li class="copyright">Copyright 2010-2022 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports, require('d3-array')) :</li>
+                    <li class="copyright">Copyright 2010-2022 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and th</li>
+                    </ul>
+                <h2 id="COM_7712e7574b545e0d5a8d52fcbfc007110495accedde3c86b5407e9bc1b9a00cc">d3-timer 3.0.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright ${copyright globals: Object.assign({}, ...Object.keys(meta.dependencies || {}).filter(key =</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports) :</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and th</li>
+                    <li class="copyright">Copyrights .join(", "); const config = { input: "src/index.js", external: Object.keys(meta.dependencies || {}).filter(key =</li>
+                    <li class="copyright">copyright = readFileSync("./LICENSE", "utf-8") .split(/ /g)</li>
+                    </ul>
+                <h2 id="COM_4c4545201dbb2a113937f4706f9e66d05d40b66d3ee92095fe1b6d4916559e95">d3-transition 3.0.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2010-2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports, require('d3-selection'), require('d3-dispatch'), require(</li>
+                    <li class="copyright">Copyright 2010-2021 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and th</li>
+                    </ul>
+                <h2 id="COM_6f38b12db4604a1d849b2899fe92676564bd5fda142bc5193de5cfa6ac61dc08">dagre v0.8.5</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2012-2014 Chris Pettitt</li>
+                    <li class="copyright">Copyright (c) 2014, Chris Pettitt All rights reserved</li>
+                    </ul>
+                <h2 id="COM_5f11a69d5e7698601743cf0c49e9729d8695cd5c322d367fe1fd257bf11b3e89">graphql-tag 2.12.6</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2021 Apollo Graph, Inc. (Formerly Meteor Development Group, Inc.)</li>
+                    </ul>
+                <h2 id="COM_ef68235c452af2c731af13cd776221864c11130cc2a8a5dc9156a8feef669a5b">graphql-ws 5.14.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2020-2021 Denis Badurina</li>
+                    <li class="copyright">Copyright (c) Microsoft Corporation. Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted.</li>
+                    </ul>
+                <h2 id="COM_bc5e39d5574e2665d45fb9805fe00986667e47d4b883e87e1fc783a80b2b6048">graphql 15.7.2</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) GraphQL Contributors</li>
+                    </ul>
+                <h2 id="COM_5aa50eb1b303289a7308f5ab9bf0e61ee807d0519abbe6be7b5fce616495a221">hoist-non-react-statics v3.3.2</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2015, Yahoo ----------------------------------------------------</li>
+                    <li class="copyright">Copyright 2015, Yahoo</li>
+                    <li class="copyright">copyright information.</li>
+                    </ul>
+                <h2 id="COM_77f92c6349bf590ded8f2817dde45d42e18665e3ccb7badcdd6301ace806f884">internmap 1.0.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2021 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports) :</li>
+                    <li class="copyright">Copyright 2021 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this pe</li>
+                    </ul>
+                <h2 id="COM_e0fb710df46f631d9215c5ec64008f25195b7c8c5c490823b3a0b291ed895417">internmap 2.0.3</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2021 Mike Bostock</li>
+                    <li class="copyright">Copyright 2021 Mike Bostock (function (global, factory) { typeof exports === 'object' &amp;&amp; typeof module !== 'undefined' ? factory(exports) :</li>
+                    <li class="copyright">Copyright 2021 Mike Bostock Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this pe</li>
+                    </ul>
+                <h2 id="COM_230e536038f542c1915760df5b2981adb621636d5ba83341654e7826327690b3">is-any-array 0.1.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2018 cheminfo</li>
+                    </ul>
+                <h2 id="COM_6b3f88eb44ac42a092f72fa07fa1de7302501a52d81c5e35a8b52e0a4607d040">is-any-array 2.0.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2018 cheminfo</li>
+                    </ul>
+                <h2 id="COM_e7115041da7c18bfc062b9693978fdf6c63ca927d2f6f707d4b819f86879c93e">js-tokens 4.0.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2014, 2015, 2016, 2017, 2018 Simon Lydell</li>
+                    <li class="copyright">Copyright (c) 2014, 2015, 2016, 2017, 2018 Simon Lydell Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"</li>
+                    <li class="copyright">Copyright 2014 Simon Lydell</li>
+                    <li class="copyright">Copyright 2014, 2015, 2016, 2017, 2018 Simon Lydell</li>
+                    <li class="copyright">Copyright 2014, 2015, 2016, 2017, 2018 Simon Lydell License: MIT. (See LICENSE.) Object.defineProperty(exports, "__esModule", { value: true</li>
+                    <li class="copyright">Copyright 2015, 2017 Simon Lydell</li>
+                    </ul>
+                <h2 id="COM_ff14c73222fb008f4987096c6af4dc4873ac733cb5ea3133f96fceecabca5d38">json5 2.2.3</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2012-2018 Aseem Kishore, and</li>
+                    <li class="copyright">copyright: '© 2019 Denis Pushkarev (zloirock.ru) });</li>
+                    </ul>
+                <h2 id="COM_ac4288babed7474844ffee1ac69922ed7d32b785021ecd7d632296a11d1bf891">loose-envify 1.4.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2015 Andres Suarez </li>
+                    <li class="copyright">Copyright: 2015-2016 Andres Suarez </li>
+                    <li class="copyright">Copyright: 2016 Paolo Greppi </li>
+                    <li class="copyright">copyright Files-Excluded: test/react/react-with-addons-with-node_env.js test/pkg/node_modules/invariant/index.js test/pkg/node_modules/warning/index.js Files:</li>
+                    <li class="copyright">copyright-format/1.0/ Upstream-Name: loose-envify Upstream-Contact: https://github.com/zertosh/loose-envify/issues Source: https://github.com/zertosh/loose-envify Comment:</li>
+                    </ul>
+                <h2 id="COM_2c3ac8a51dafccb74ddf54451d8f1ec77e381f93ce3e5515b4b1bf41a9b88f30">ml-array-min 1.2.3</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2017 ml.js</li>
+                    </ul>
+                <h2 id="COM_05ca4965dafde14b4126ce5d05eccf3c3dace391fa4beddd51d2293ad23b3e10">ml-array-min 1.2.4</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2017 ml.js</li>
+                    </ul>
+                <h2 id="COM_be8eabb248b56caeb93c43c99bbb5f1c2289d5a16a124c571019d497713e31e2">ml-array-min 1.3.7</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2017 mljs</li>
+                    </ul>
+                <h2 id="COM_8dfafa177ef855aa9170742bd466eb0621b2be3cb532cdf9f26cd97183e5927e">moment/moment 2.30.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) JS Foundation and other contributors</li>
+                    </ul>
+                <h2 id="COM_6be48843cc998ed88ac8101119d466a1095d90f335b933699dbcc40487b21c02">ngx-translate/core 14.0.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2018 Olivier Combe</li>
+                    </ul>
+                <h2 id="COM_3e0693054335e4693548ae21b678a483fed415f29a22419f60557e7ed4681a8d">object-assign 4.1.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) Sindre Sorhus </li>
+                    <li class="copyright">Copyright: 2016 Sindre Sorhus </li>
+                    <li class="copyright">Copyright: 2016 Sruthi Chandran </li>
+                    <li class="copyright">copyright-format/1.0/ Upstream-Name: object-assign Upstream-Contact: https://github.com/sindresorhus/object-assign/issues Source: https://github.com/sindresorhus/object-assignreadme Files:</li>
+                    </ul>
+                <h2 id="COM_04d8b1039509e54ad03729c296fb013d87cc06045c09e2b491b3aeee6acccc91">optimism 0.17.5</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2016 Ben Newman</li>
+                    </ul>
+                <h2 id="COM_ecdc9e34cc528819dd7fee952f4dbe48128c5adf1fa957a13f8dad4b400f540a">parse5 5.1.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2013-2019 Ivan Nikulin (ifaaan@gmail.com, https://github.com/inikulin)</li>
+                    <li class="copyright">Copyright (c) 2013-2019 Ivan Nikulin (ifaaan@gmail.com, https://github.com/inikulin) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated docume</li>
+                    </ul>
+                <h2 id="COM_05f4081dd6e735a7006e93a34bcec67e2c31427ff21cbdb8b2da44cf73479cf4">prop-types 15.8.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2013-present, Facebook, Inc.</li>
+                    <li class="copyright">Copyright (c) Facebook, Inc. and its affiliates.</li>
+                    </ul>
+                <h2 id="COM_66b86810b2b598708f24a18355b7f5acc7f60f60c35e4a68ac88dd8cd0fd12a2">react-is 16.13.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) Facebook, Inc. and its affiliates.</li>
+                    </ul>
+                <h2 id="COM_6edef33d5c9b2b14b57cc0b8152e106d8f87d89e4f1091912950f0dc6bac64fe">rfdc 1.4.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright 2019 "David Mark Clements </li>
+                    </ul>
+                <h2 id="COM_b1b26d556d09e91e52f4d79089b3b6c8ba9aed91f6f75336bb506b7dde0bf513">swimlane - ngx-charts 20.4.1</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2017 Swimlane</li>
+                    </ul>
+                <h2 id="COM_1a361e76c30f82cbd9f1630297ee325cadabe82802db97be09c2b3269d28fc97">symbol-observable 4.0.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2021 Ben Lesh </li>
+                    <li class="copyright">Copyright (c) 2021 Sindre Sorhus </li>
+                    </ul>
+                <h2 id="COM_60f1ca4311b77db02c4a1b6383142ccf3e29ebd1027eadaddbfacde789270101">transformation-matrix 1.15.3</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2017 https://github.com/chrvadala</li>
+                    </ul>
+                <h2 id="COM_92932cb8eefb7d483f226211de9032661ec889e4898d49aa8d9ff18ed3643496">ts-invariant 0.10.3</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2019 Apollo GraphQL</li>
+                    </ul>
+                <h2 id="COM_22b6e3d8831d62eaff4bd383f368fa3f13c393dd7bfc7b3a6701186eaa925cd3">umap-js 1.4.0</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2017, Leland McInnes All rights reserved</li>
+                    <li class="copyright">Copyright 2019 Google LLC. All Rights Reserved</li>
+                    </ul>
+                <h2 id="COM_bdd0f83fabeb8430f60a33375ce91b6d848e15f71df0a93c15ca7e8d0ef06abc">zen-observable 0.8.15</h2>
+                            <h3>Copyrights</h3>
+                <ul>
+                <li class="copyright">Copyright (c) 2018 zenparsing (Kevin Smith)</li>
+                    </ul>
+                
+      </div>
+  </body>
+</html>

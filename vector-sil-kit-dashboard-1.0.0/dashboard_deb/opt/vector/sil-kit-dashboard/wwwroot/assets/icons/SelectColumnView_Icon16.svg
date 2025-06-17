@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <g id="SILKitDashboard">
+    <g id="SelectColumnView_Icon16">
+      <rect width="16" height="16" style="fill: #f0f; opacity: 0;"/>
+      <path d="M1,2V14H15V2H1ZM14,13H2V3H14V13Z" style="fill: #4c4c4c;"/>
+      <rect x="3" y="4" width="2" height="8" style="fill: #4c4c4c;"/>
+      <rect x="11" y="4" width="2" height="8" style="fill: #4c4c4c;"/>
+      <rect x="6" y="4" width="4" height="8" style="fill: #4c4c4c;"/>
+    </g>
+  </g>
+</svg>

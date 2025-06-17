@@ -1,0 +1,10 @@
+Package: sil-kit-dashboard
+Version: 1.0.0-jammy
+Section: misc
+Maintainer: Vector Informatik GmbH <support@vector.com>
+Priority: optional
+Architecture: amd64
+Provides: sil-kit-dashboard
+Description: SIL Kit Dashboard by Vector Informatik GmbH
+Depends: aspnetcore-runtime-8.0
+Installed-Size: 44589

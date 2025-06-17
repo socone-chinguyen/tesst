@@ -1,0 +1,367 @@
+{
+  "actions": {
+    "pause": "Pause automatic page refresh",
+    "continue": "Continue automatic page refresh",
+    "show_network_setup": "Show network setup",
+    "show_participants_statuses": "Show status history",
+    "show_tests": "Show test results",
+    "mark_for_delete": "Delete",
+    "unmark_for_delete": "Restore",
+    "results": {
+      "failure": "{{action}} failed",
+      "success": "{{action}} successful"
+    }
+  },
+  "buttons": {
+    "save": "Save",
+    "close": "Close"
+  },
+  "languages": {
+    "de": "German",
+    "en": "English"
+  },
+  "info": {
+    "help": {
+      "text": "Help",
+      "link": "/static/en/content/topics/help/silkitdashboard.htm"
+    },
+    "license": {
+      "text": "License Information",
+      "link": "/static/en/content/topics/help/contactcopyrightlicense.htm"
+    },
+    "termsofuse": {
+      "text": "Terms of Use",
+      "link": "https://cdn.vector.com/cms/content/corporate/terms-and-conditions/Vector_Terms_of_Use_for_Free_Software.pdf"
+    },
+    "vector_homepage": {
+      "text": "Vector Homepage",
+      "link": "https://www.vector.com/us/en/"
+    }
+  },
+  "units": {
+    "ms": "ms"
+  },
+  "dateFormat": "MM/dd/yyyy, hh:mm:ss.SSS aa",
+  "header": {
+    "simulations": "Simulations",
+    "network-setup": "Network Setup",
+    "participants-statuses": "Status History",
+    "logout": "Logout"
+  },
+  "login": {
+    "title": "Welcome",
+    "email": "E-Mail",
+    "password": "Password",
+    "login": "Login",
+    "error": {
+      "wrongusernameorpassword": "Email or password invalid",
+      "tokenexpired": "You session has expired, please login again."
+    },
+    "logout": "Logout successful"
+  },
+  "network": {
+    "columns": {
+      "header": {
+        "decorator": "S",
+        "name": "Network Name",
+        "type": "Network Type",
+        "networkSimulators": "Simulated by"
+      },
+      "filter": {
+        "type": "Network Type",
+        "networkSimulators": "Simulated by"
+      }
+    },
+    "types": {
+      "CAN": "CAN",
+      "LIN": "LIN",
+      "ETHERNET": "Ethernet",
+      "FLEX_RAY": "FlexRay"
+    },
+    "empty-table": "No network has been registered yet."
+  },
+  "data-rpc-link": {
+    "columns": {
+      "header": {
+        "decorator": "S",
+        "name": "Link Name",
+        "type": "Link Type",
+        "topicOrFunctionName": "Topic / Function Name"
+      },
+      "filter": {
+        "name": "Link Name",
+        "topicOrFunctionName": "Topic / Function Name"
+      }
+    },
+    "types": {
+      "DATA": "Data",
+      "RPC": "RPC"
+    },
+    "empty-table": "No Link has been registered yet."
+  },
+  "controller": {
+    "columns": {
+      "header": {
+        "decorator": "S",
+        "networkName": "Network Name",
+        "name": "Name",
+        "type": "Service Type"
+      },
+      "filter": {
+        "type": "Service Type"
+      }
+    },
+    "types": {
+      "CAN": "CAN Controller",
+      "LIN": "LIN Controller",
+      "ETHERNET": "Ethernet Controller",
+      "FLEX_RAY": "FlexRay Controller"
+    },
+    "infos": {
+      "undefined": "Info",
+      "WARNING": "Warning",
+      "ERROR": "Error"
+    },
+    "empty-table": "The participant has not created any controller yet."
+  },
+  "data-rpc-service": {
+    "columns": {
+      "header": {
+        "decorator": "S",
+        "name": "Name",
+        "type": "Service Type",
+        "topicOrFunctionName": "Topic / Function Name",
+        "mediaType": "Media Type",
+        "labels": "Labels"
+      },
+      "filter": {
+        "type": "Service Type",
+        "topicOrFunctionName": "Topic / Function Name",
+        "mediaType": "Media Type",
+        "labels": "Labels"
+      }
+    },
+    "types": {
+      "DATA_PUBLISHER": "Data Publisher",
+      "DATA_SUBSCRIBER": "Data Subscriber",
+      "RPC_SERVER": "RPC Server",
+      "RPC_CLIENT": "RPC Client"
+    },
+    "infos": {
+      "undefined": "Info",
+      "WARNING": "Warning",
+      "ERROR": "Error"
+    },
+    "empty-table": "The participant has not created any service yet."
+  },
+  "no-selection": {
+    "columns": {
+      "header": {
+        "name": "Name"
+      }
+    },
+    "empty-table": "Click on a participant or a connection and details will show up here."
+  },
+  "participant": {
+    "columns": {
+      "header": {
+        "name": "Participant Name",
+        "decorator": "S",
+        "state": "State",
+        "enterReason": "Enter Reason",
+        "enterTime": "Enter Time",
+        "duration": "Duration"
+      },
+      "filter": {
+        "enterReason": "Enter Reason",
+        "duration": "Duration"
+      }
+    },
+    "infos": {
+      "undefined": "Info",
+      "WARNING": "Warning",
+      "ERROR": "Error"
+    },
+    "states": {
+      "UNKNOWN": "Unknown",
+      "INVALID": "Invalid",
+      "SERVICES_CREATED": "Services created",
+      "COMMUNICATION_INITIALIZING": "Communication initializing",
+      "COMMUNICATION_INITIALIZED": "Communication initialized",
+      "READY_TO_RUN": "Ready to run",
+      "RUNNING": "Running",
+      "PAUSED": "Paused",
+      "STOPPING": "Stopping",
+      "STOPPED": "Stopped",
+      "ERROR": "Error",
+      "SHUTTING_DOWN": "Shutting down",
+      "SHUTDOWN": "Shutdown",
+      "ABORTING": "Aborting"
+    },
+    "empty-table": "No participant has notified a state change yet."
+  },
+  "simulation": {
+    "columns": {
+      "header": {
+        "hidden": "Deleted",
+        "status": "S",
+        "id": "#",
+        "started": "Start",
+        "stopped": "End",
+        "connectUri": "Connect URI",
+        "state": "System State",
+        "action": "Actions"
+      },
+      "desc": {
+        "id": ""
+      },
+      "filter": {
+        "hidden": "Deleted",
+        "id": "Id",
+        "started": "Start",
+        "stopped": "End",
+        "state": "System State"
+      }
+    },
+    "statuss": {
+      "RUNNING": "Running",
+      "SUCCESS": "Success",
+      "FAILURE": "Failure"
+    },
+    "states": {
+      "null": "Unknown",
+      "UNKNOWN": "Unknown",
+      "INVALID": "Invalid",
+      "SERVICES_CREATED": "Services created",
+      "COMMUNICATION_INITIALIZING": "Communication initializing",
+      "COMMUNICATION_INITIALIZED": "Communication initialized",
+      "READY_TO_RUN": "Ready to run",
+      "RUNNING": "Running",
+      "PAUSED": "Paused",
+      "STOPPING": "Stopping",
+      "STOPPED": "Stopped",
+      "ERROR": "Error",
+      "SHUTTING_DOWN": "Shutting down",
+      "SHUTDOWN": "Shutdown",
+      "ABORTING": "Aborting"
+    },
+    "empty-table": "Start a simulation and its data will show up here."
+  },
+  "network-setup": {
+    "title": "Network Setup",
+    "chart": {
+      "legend": {
+        "title": "Legend",
+        "abstract": "aggregated",
+        "network simulated": "simulated",
+        "participant": "participant",
+        "selected": "selected",
+        "WARNING": "warning",
+        "ERROR": "error",
+        "CAN": "CAN",
+        "LIN": "LIN",
+        "ETHERNET": "Ethernet",
+        "FLEX_RAY": "FlexRay",
+        "other": "other"
+      },
+      "empty": "No participant or network has been registered yet."
+    },
+    "tabs": {
+      "networks": "Networks",
+      "data-rpc-links": "Data / RPC",
+      "controllers": "Controllers",
+      "data-rpc-services": "Data / RPC Services"
+    },
+    "tooltips": {
+      "no-participant-in-network": "No participant in this network",
+      "participant-created-no-service": "The participant has not created any service",
+      "participant-created-many-services": "The participant has created many services for one network",
+      "no-matching-cancontroller": "No matching CAN controller found in the network",
+      "no-matching-ethernetcontroller": "No matching Ethernet controller found in the network",
+      "no-matching-flexraycontroller": "No matching FlexRay controller found in the network",
+      "no-matching-lincontroller": "No matching LIN controller found in the network",
+      "no-matching-datapublisher": "No matching data publisher controller found in the network",
+      "no-matching-datasubscriber": "No matching data subscriber controller found in the network",
+      "no-matching-rpcclient": "No matching RPC client found in the network",
+      "no-matching-rpcserver": "No matching RPC server found in the network",
+      "too-many-matching-datapublishers": "Too many data publishers found in the network",
+      "too-many-matching-rpcservers": "Too many rpc servers found in the network",
+      "too-many-networksimulators": "Too many network simulators simulating the same network"
+    },
+    "select-layout": "View",
+    "menu": {
+      "overview": "Overview",
+      "participant-selected": "Participant: {{name}}",
+      "participant": "Participants",
+      "network-selected": "Network: {{name}}",
+      "network": "Networks",
+      "topic-selected": "Topic : {{name}}",
+      "topic": "Topics",
+      "functionName-selected": "Function Name : {{name}}",
+      "functionName": "Function Names"
+    }
+  },
+  "simulations": {
+    "title": "Simulations"
+  },
+  "participants-statuses": {
+    "title": "Status History"
+  },
+  "simulation-title": "Simulation #{{id}} ({{started}})",
+  "simulation-subtitle": "{{name}}",
+  "table": {
+    "columns": "Columns",
+    "filter": {
+      "title": "Filter",
+      "equals": "==",
+      "greater": ">=",
+      "lower": "<=",
+      "date": "Choose a date",
+      "all": "(Select all)"
+    },
+    "search": "Search...",
+    "sort": {
+      "string": {
+        "asc": "Sort A to Z",
+        "desc": "Sort Z to A"
+      },
+      "number": {
+        "asc": "Sort Smallest to Largest",
+        "desc": "Sort Largest to Smallest"
+      },
+      "date": {
+        "asc": "Sort Oldest to Newest",
+        "desc": "Sort Newest to Oldest"
+      },
+      "predefined": {
+        "asc": "Sort using predefined order (ascending)",
+        "desc": "Sort using predefined order (descending)"
+      }
+    },
+    "paginator": {
+      "itemsPerPage": "Items per page",
+      "page": "Page",
+      "of": "of",
+      "first-page": "First page",
+      "prev-page": "Previous page",
+      "next-page": "Next page",
+      "last-page": "Last page"
+    },
+    "configuration": {
+      "is": "is",
+      "and": "and",
+      "greater": "is greater than or equal to"
+    }
+  },
+  "error": {
+    "go-home": "Go to dashboard home",
+    "0": "Connection refused, please try again later.",
+    "400": "Invalid request, please do not try again.",
+    "401": "Authentication is required.",
+    "403": "Permission is required.",
+    "404": "The requested resource is not available.",
+    "500": "An internal error occurred, please try again later."
+  },
+  "false": "false",
+  "true": "true"
+}

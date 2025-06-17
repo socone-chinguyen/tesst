@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_2" data-name="Ebene 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <g id="SILKitDashboard">
+    <g id="History_Icon16">
+      <rect width="16" height="16" style="fill: #f0f; opacity: 0;"/>
+      <path d="M7.5,3c-3.04,0-5.5,2.46-5.5,5.5s2.46,5.5,5.5,5.5,5.5-2.46,5.5-5.5S10.54,3,7.5,3Zm0,10c-2.48,0-4.5-2.02-4.5-4.5s2.02-4.5,4.5-4.5,4.5,2.02,4.5,4.5-2.02,4.5-4.5,4.5Z" style="fill: #4c4c4c;"/>
+      <rect x="7" y="5" width="1" height="4" style="fill: #4c4c4c;"/>
+      <rect x="7" y="8" width="4" height="1" style="fill: #4c4c4c;"/>
+      <rect x="7" y="8" width="1" height="1" style="fill: #4c4c4c;"/>
+      <rect x="7" y="11" width="1" height="1" style="fill: #4c4c4c;"/>
+      <rect x="4" y="8" width="1" height="1" style="fill: #4c4c4c;"/>
+      <path d="M6.6,2c-1.29,0-2.65,.28-3.6,1L1,1V7H7.1l-2.1-2c.7-.72,1.59-1,2.61-1,1.78,0,3.78,.72,4.8,2-.63-2.35-3.23-4-5.82-4Z" style="fill: #4c4c4c;"/>
+    </g>
+  </g>
+</svg>

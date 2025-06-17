@@ -1,0 +1,36 @@
+﻿ .mguiexample {
+    font-family: monospace;
+	mc-hidden: hidden;
+    }
+
+.mguiselection {
+    font-weight: bold;
+	mc-hidden: hidden;
+    }
+
+.mguiarea {
+    font-weight: bold;
+	mc-hidden: hidden;
+    }
+
+.mguigroup {
+    font-weight: bold;
+    color: #00B0F0;
+	mc-hidden: hidden;
+    }
+
+.mguicomment {
+    font-style: italic;
+    color: #708090;
+	mc-hidden: hidden;
+    }
+
+.mguisetting {
+    font-weight: bold;
+	mc-hidden: hidden;
+    }
+
+.mguivalue {
+    font-style: italic;
+	mc-hidden: hidden;
+    }

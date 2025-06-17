@@ -1,0 +1,1574 @@
+/*<meta />*/
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+/*                       */
+/*   BASIC DEFINITIONS   */
+/*                       */
+
+body
+{
+	font-size: 10pt;
+	font-family: Verdana;
+}
+
+html
+{
+	mc-master-page: url('../masterpages/vmasterpage.flmsp');
+}
+
+div.Indent
+{
+	margin-left: 25pt;
+}
+
+div.IndentIndent
+{
+	margin-left: 43pt;
+}
+
+div.Procedure
+{
+	margin-left: 5pt;
+	mc-disabled: false;
+}
+
+hr
+{
+	border-bottom-color: #028FC3;
+}
+
+hr.Tab
+{
+	display: block;
+	margin-top: 0em;
+	margin-bottom: 2em;
+	margin-left: 2px;
+	border-bottom-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	border-top-style: solid;
+	border-top-color: #028FC3;
+}
+
+img
+{
+	border: none;
+}
+
+sub
+{
+	mc-disabled: false;
+}
+
+sup
+{
+	mc-disabled: false;
+}
+
+/***   List Definitions   ***/
+
+ol,
+ul
+{
+	padding-left: 25pt;
+	margin: 0pt;
+	margin-top: 0px;
+	margin-bottom: 9pt;
+	margin-left: 0pt;
+}
+
+ol
+{
+	list-style-type: decimal;
+}
+
+ul
+{
+	list-style-type: disc;
+	list-style-image: url('../vimages/vbackstage/vlistitem.png');
+}
+
+li
+{
+	display: list-item;
+	margin-bottom: 3pt;
+	font-family: Verdana;
+	font-size: 10pt;
+}
+
+li.Bold
+{
+	font-weight: bold;
+}
+
+li.Indent
+{
+	margin-left: 18pt;
+}
+
+li.IndentBold
+{
+	font-weight: bold;
+	margin-left: 18pt;
+}
+
+li.IndentIndent
+{
+	margin-left: 45px;
+}
+
+li.IndentIndentBold
+{
+	font-weight: bold;
+	margin-left: 45px;
+}
+
+/***   Table Definitions   ***/
+
+table
+{
+	margin-bottom: 15px;
+}
+
+th
+{
+	font-weight: bold;
+	color: #b70032;
+	background-color: #dadee1;
+	vertical-align: top;
+	text-align: left;
+	padding: 5pt;
+	padding-bottom: 5pt;
+}
+
+td
+{
+	display: table-cell;
+	vertical-align: top;
+	padding: 5pt;
+	padding-top: 5pt;
+	padding-bottom: 0pt;
+}
+
+/*                       */
+/*   PARAGRAPHS          */
+/*                       */
+
+p
+{
+	display: block;
+	margin: 0pt;
+	margin-bottom: 9pt;
+	margin-top: 0pt;
+	margin-right: 0pt;
+	font-family: Verdana;
+	font-size: 10pt;
+}
+
+p.Availability
+{
+	font-size: 8pt;
+	padding: 0px;
+	margin-bottom: 0pt;
+}
+
+p.Blue
+{
+	color: #028fc3;
+}
+
+p.Bold
+{
+	font-weight: bold;
+}
+
+p.BoldBlue
+{
+	color: #000000;
+	font-weight: bold;
+}
+
+p.Footer
+{
+	font-size: 8pt;
+	color: #ffffff;
+	margin-bottom: 0px;
+	margin-left: -5px;
+}
+
+p.Green
+{
+	color: #00a765;
+}
+
+p.Header
+{
+	font-size: 8pt;
+	color: #909090;
+	text-align: center;
+	margin-bottom: 0pt;
+}
+
+p.IndexConcept
+{
+	/* reserved */
+}
+
+p.LinkList
+{
+	font-size: 8pt;
+	color: #b70032;
+	background-color: #dadee1;
+	margin-bottom: 0px;
+	margin-top: 30px;
+	padding-top: 2px;
+	padding-bottom: 5px;
+}
+
+p.MenuPath
+{
+	color: #b70032;
+	background-color: #dadee1;
+	font-size: 8pt;
+	font-style: normal;
+	padding-bottom: 2px;
+	margin-bottom: 20px;
+	padding-top: 5px;
+}
+
+p.Result
+{
+	margin-left: 25pt;
+}
+
+p.ResultIndent
+{
+	margin-left: 43pt;
+}
+
+p.SourceCode
+{
+	font-family: 'Courier New';
+	background-color: #dadee1;
+}
+
+p.SourceCodeIndent
+{
+	font-family: 'Courier New';
+	background-color: #dadee1;
+	margin-left: 25pt;
+}
+
+p.StartList	/*p before a list/enumeration starts (makes it obviously that they belong together)*/
+{
+	margin-bottom: 3pt;
+}
+
+p.StructurePath
+{
+	font-size: 8pt;
+	background-color: #565c5e;
+	color: #ffffff;
+	margin-bottom: 0px;
+	padding-left: 1px;
+	padding-bottom: 10px;
+}
+
+p.Syntax
+{
+	font-family: 'Courier New';
+	padding-top: 1pt;
+}
+
+p.SyntaxIndent
+{
+	font-family: 'Courier New';
+	padding-top: 1pt;
+	margin-left: 25pt;
+}
+
+p.Table
+{
+	margin-bottom: 3pt;
+}
+
+p.TableBeforeInfoblock	/*p.Table with bigger space to following info block*/
+{
+	display: block;
+	margin: 0pt;
+	margin-bottom: 9pt;
+	margin-top: 0pt;
+	margin-right: 0pt;
+}
+
+p.TableBold
+{
+	font-weight: bold;
+	margin-bottom: 3pt;
+}
+
+p.TableCOM
+{
+	font-size: 8pt;
+	color: #909090;
+	margin-bottom: 0pt;
+}
+
+p.TableGUI
+{
+	font-weight: bold;
+	margin-bottom: 3pt;
+}
+
+p.TableHead
+{
+	font-weight: bold;
+	margin-bottom: 3pt;
+}
+
+p.TableHeadSmall
+{
+	font-size: 8pt;
+	font-weight: bold;
+	color: #b70032;
+	background-color: #dcdcdc;
+	margin-bottom: 3pt;
+}
+
+p.TableKeyboard
+{
+	font-weight: bold;
+	margin-bottom: 3pt;
+}
+
+p.TableSourceCode
+{
+	font-family: 'Courier New';
+	background-color: #dadee1;
+	margin-bottom: 3pt;
+}
+
+p.TableSourceCodeIndent
+{
+	font-family: 'Courier New';
+	background-color: #dadee1;
+	margin-left: 25pt;
+	margin-bottom: 3pt;
+}
+
+p.TableSymbolHead
+{
+	font-weight: bold;
+}
+
+p.TableSyntax
+{
+	font-family: 'Courier New';
+	padding-top: 1pt;
+	margin-bottom: 3pt;
+}
+
+p.TableSyntaxIndent
+{
+	font-family: 'Courier New';
+	padding-top: 1pt;
+	margin-bottom: 3pt;
+	margin-left: 25pt;
+}
+
+p.TableTextSmall
+{
+	font-size: 8pt;
+	margin-bottom: 3pt;
+}
+
+/*                       */
+/*   HEADLINES           */
+/*                       */
+
+h
+{
+	font-weight: bold;
+	margin: 0pt;
+}
+
+h1
+{
+	font-size: 16pt;
+	color: #ffffff;
+	margin: 0px;
+	padding-left: 1px;
+	background-color: #565c5e;
+	margin-top: 0px;
+	padding-bottom: 5px;
+	margin-bottom: 0px;
+	padding-top: 5px;
+}
+
+h1.obsolete
+{
+	color: #b1b6ba;
+	background-color: #565c5e;
+}
+
+h2
+{
+	font-size: 10pt;
+	margin-top: 14pt;
+	margin-bottom: 10pt;
+}
+
+h2.GroupBox
+{
+	border-bottom: solid;
+	border-bottom-color: #B1B6BA;
+	border-bottom-width: 1px;
+}
+
+h2.ModulInfo
+{
+	color: #b70032;
+	border-bottom-color: #b70032;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+}
+
+h2.NavigationXS
+{
+	background: vNavigationXS;
+	background-image: url('../vimages/vnavigationxs.png');
+	background-repeat: no-repeat;
+	background-attachment: inherit;
+	padding: 2pt;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #028FC3;
+}
+
+h2.NavigationS
+{
+	background: vNavigationS;
+	background-image: url('../vimages/vnavigations.png');
+	background-repeat: no-repeat;
+	background-attachment: inherit;
+	padding: 2pt;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #028FC3;
+}
+
+h2.NavigationM
+{
+	background: vNavigationM;
+	background-image: url('../vimages/vnavigationm.png');
+	background-repeat: no-repeat;
+	background-attachment: inherit;
+	padding: 2pt;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #028FC3;
+}
+
+h2.NavigationL
+{
+	background: vNavigationL;
+	background-image: url('../vimages/vnavigationl.png');
+	background-repeat: no-repeat;
+	background-attachment: inherit;
+	padding: 2pt;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #028FC3;
+}
+
+h2.NavigationXL
+{
+	background: vNavigationXL;
+	background-image: url('../vimages/vnavigationxl.png');
+	background-repeat: no-repeat;
+	background-attachment: inherit;
+	padding: 2pt;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #028FC3;
+}
+
+h2.SectionMain
+{
+	color: #ffffff;
+	background-color: #028fc3;
+	padding-top: 3px;
+	padding-left: 1px;
+	padding-bottom: 3px;
+	margin-top: 18pt;
+	margin-bottom: 10pt;
+}
+
+h2.SectionSub
+{
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #028fc3;
+}
+
+h3
+{
+	font-size: 10pt;
+	margin: 0pt;
+	margin-bottom: 9pt;
+}
+
+h3.GroupBox
+{
+	border-bottom: solid;
+	border-bottom-color: #B1B6BA;
+	border-bottom-width: 1px;
+}
+
+/*                       */
+/*   HYPERLINKS          */
+/*                       */
+
+a
+{
+	color: #000000;
+	text-decoration: underline;
+	font-family: Verdana;
+	font-size: 10pt;
+}
+
+a:link
+{
+	color: #000000;
+}
+
+a:visited
+{
+	color: #000000;
+}
+
+a:focus
+{
+	color: #000000;
+}
+
+a:hover
+{
+	color: #b70032;
+}
+
+a.blue
+{
+	color: #b70032;
+	text-decoration: underline;
+	font-family: Verdana;
+	font-size: 10pt;
+}
+
+a.blue:link
+{
+	color: #b70032;
+	text-decoration: underline;
+	font-family: Verdana;
+	font-size: 10pt;
+}
+
+a.blue:visited
+{
+	color: #b70032;
+	text-decoration: underline;
+	font-family: Verdana;
+	font-size: 10pt;
+}
+
+a.blue:focus
+{
+	color: #b70032;
+	text-decoration: underline;
+	font-family: Verdana;
+	font-size: 10pt;
+}
+
+a.blue:hover
+{
+	color: #b70032;
+	text-decoration: underline;
+	font-family: Verdana;
+	font-size: 10pt;
+}
+
+a.bold
+{
+	font-weight: bold;
+}
+
+a.bold:link
+{
+	color: #000000;
+}
+
+a.bold:visited
+{
+	color: #000000;
+}
+
+a.bold:focus
+{
+	color: #000000;
+}
+
+a.bold:hover
+{
+	color: #b70032;
+}
+
+a.ExecuteLink
+{
+	color: #028FC3;
+}
+
+a.ExecuteLink:link
+{
+	color: #028FC3;
+}
+
+a.ExecuteLink:visited
+{
+	color: #028FC3;
+}
+
+a.ExecuteLink:focus
+{
+	color: #028FC3;
+}
+
+a.ExecuteLink:hover
+{
+	color: #b70032;
+}
+
+a.ExpandingBody
+{
+	color: #909090;
+}
+
+a.ExpandingBody:link
+{
+	color: #909090;
+}
+
+a.ExpandingBody:visited
+{
+	color: #909090;
+}
+
+a.ExpandingBody:focus
+{
+	
+}
+
+a.ExpandingBody:hover
+{
+	color: #b70032;
+}
+
+a.ExternalLink
+{
+	color: #028FC3;
+}
+
+a.ExternalLink:focus
+{
+	color: #b70032;
+}
+
+a.ExternalLink:hover
+{
+	color: #b70032;
+}
+
+a.ExternalLink:hover
+{
+	color: #b70032;
+}
+
+a.Glossary
+{
+	background-color: #DADEE1;
+}
+
+a.GUI
+{
+	font-weight: bold;
+}
+
+a.GUI:hover
+{
+	color: #b70032;
+}
+
+a.LinkList
+{
+	font-size: 8pt;
+	color: #b70032;
+	text-decoration: none;
+}
+
+a.LinkList:link
+{
+	font-size: 8pt;
+	color: #b70032;
+	text-decoration: none;
+}
+
+a.LinkList:visited
+{
+	font-size: 8pt;
+	color: #b70032;
+	text-decoration: none;
+}
+
+a.LinkList:focus
+{
+	font-size: 8pt;
+	color: #b70032;
+	text-decoration: none;
+}
+
+a.LinkList:hover
+{
+	font-size: 8pt;
+	color: #b70032;
+	text-decoration: underline;
+}
+
+a.MenuPath
+{
+	font-size: 8pt;
+	color: #b70032;
+	text-decoration: none;
+}
+
+a.MenuPath:link
+{
+	font-size: 8pt;
+	color: #b70032;
+	text-decoration: none;
+}
+
+a.MenuPath:visited
+{
+	font-size: 8pt;
+	color: #b70032;
+	text-decoration: none;
+}
+
+a.MenuPath:focus
+{
+	font-size: 8pt;
+	color: #b70032;
+	text-decoration: none;
+}
+
+a.MenuPath:hover
+{
+	font-size: 8pt;
+	color: #b70032;
+	text-decoration: underline;
+}
+
+a.Popup
+{
+	text-decoration: underline;
+}
+
+a.Popup:link
+{
+	text-decoration: underline;
+}
+
+a.Popup:visited
+{
+	text-decoration: underline;
+}
+
+a.Popup:focus
+{
+	text-decoration: none;
+}
+
+a.Popup:hover
+{
+	color: #b70032;
+}
+
+a.red
+{
+	color: #b70032;
+}
+
+a.red:link
+{
+	color: #b70032;
+}
+
+a.red:visited
+{
+	color: #b70032;
+}
+
+a.red:focus
+{
+	color: #b70032;
+}
+
+a.red:hover
+{
+	color: #b70032;
+}
+
+a.Small
+{
+	font-size: 8pt;
+}
+
+a.SourceCode
+{
+	font-family: 'Courier New';
+}
+
+a.SourceCode:link
+{
+	font-family: 'Courier New';
+}
+
+a.SourceCode:visited
+{
+	font-family: 'Courier New';
+}
+
+a.SourceCode:focus
+{
+	font-family: 'Courier New';
+}
+
+a.SourceCode:hover
+{
+	font-family: 'Courier New';
+	color: #b70032;
+}
+
+a.StructurePath
+{
+	font-size: 8pt;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a.StructurePath:link
+{
+	font-size: 8pt;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a.StructurePath:visited
+{
+	font-size: 8pt;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a.StructurePath:focus
+{
+	font-size: 8pt;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a.StructurePath:hover
+{
+	font-size: 8pt;
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+a.Tab
+{
+	font-size: 8pt;
+	text-decoration: none;
+	color: #909090;
+}
+
+a.Tab:link
+{
+	font-size: 8pt;
+	text-decoration: none;
+	color: #909090;
+}
+
+a.Tab:visited
+{
+	font-size: 8pt;
+	text-decoration: none;
+	color: #909090;
+}
+
+a.Tab:focus
+{
+	font-size: 8pt;
+	text-decoration: none;
+	color: #909090;
+}
+
+a.Tab:hover
+{
+	font-size: 8pt;
+	color: #909090;
+	text-decoration: underline;
+}
+
+a.TopOfPage
+{
+	font-size: 8pt;
+	color: #909090;
+	text-decoration: none;
+}
+
+a.TopOfPage:link
+{
+	font-size: 8pt;
+	color: #909090;
+	text-decoration: none;
+}
+
+a.TopOfPage:visited
+{
+	font-size: 8pt;
+	color: #909090;
+	text-decoration: none;
+}
+
+a.TopOfPage:focus
+{
+	font-size: 8pt;
+	color: #909090;
+	text-decoration: none;
+}
+
+a.TopOfPage:hover
+{
+	font-size: 8pt;
+	color: #909090;
+	text-decoration: none;
+}
+
+a.TopOfPageWhite
+{
+	font-size: 8pt;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+a.White
+{
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.White:link
+{
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.White:visited
+{
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.White:focus
+{
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.White:hover
+{
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/*                       */
+/*   SPAN CLASSES        */
+/*                       */
+
+span.blue
+{
+	color: #028fc3;
+}
+
+span.bold
+{
+	font-weight: bold;
+}
+
+span.green
+{
+	color: #00a765;
+}
+
+span.GUI
+{
+	font-weight: bold;
+}
+
+span.Highlight
+{
+	color: #028fc3;
+}
+
+span.Keyboard
+{
+	font-weight: bold;
+}
+
+span.Product
+{
+	color: #b70032;
+}
+
+span.red
+{
+	color: #b70032;
+}
+
+span.small
+{
+	font-size: 8pt;
+}
+
+span.SourceCode
+{
+	font-family: 'Courier New';
+}
+
+span.Variant
+{
+	font-weight: normal;
+	color: #EF7C00;
+}
+
+span.yellow
+{
+	color: #fbb900;
+}
+
+/*                       */
+/*   MADCAP STYLES       */
+/*                       */
+
+MadCap|bodyProxy
+{
+	
+}
+
+MadCap|conceptLink
+{
+	mc-image: url('../vimages/vconceptlink.png');
+	color: #b70032;
+	font-size: 8pt;
+	text-decoration: none;
+	mc-image-spacing: 5px;
+	mc-image-position: left;
+	font-weight: normal;
+	mc-label: 'See Also';
+}
+
+MadCap|dropDown
+{
+	mc-closed-image: url('../vimages/vexpandclose.png');
+	mc-open-image: url('../vimages/vexpandopen.png');
+}
+
+MadCap|dropDownHead
+{
+	margin-bottom: 9pt;
+}
+
+MadCap|dropDownHotspot
+{
+	cursor: hand;
+	color: #b70032;
+	font-weight: bold;
+}
+
+MadCap|expanding
+{
+	mc-closed-image: url('../vimages/vexpandclose.png');
+	mc-open-image: url('../vimages/vexpandopen.png');
+}
+
+MadCap|expandingBody
+{
+	font-style: italic;
+	color: #909090;
+	font-size: 10pt;
+	font-family: Verdana;
+	font-weight: normal;
+}
+
+MadCap|expandingHead
+{
+	font-style: italic;
+	font-weight: normal;
+	cursor: hand;
+	text-decoration: none;
+	color: #b70032;
+}
+
+MadCap|glossaryTerm
+{
+	color: #b70032;
+	mc-image-position: right;
+	font-weight: normal;
+	mc-open-image: url('../vimages/vexpandopen.png');
+	mc-closed-image: url('../vimages/vexpandclose.png');
+}
+
+MadCap|glossaryTerm.Expanding
+{
+	color: #b70032;
+	text-decoration: none;
+	font-size: 10pt;
+	font-family: Verdana;
+	mc-open-image: url('../vimages/vexpandopen.png');
+	mc-closed-image: url('../vimages/vexpandclose.png');
+	font-weight: inherit;
+}
+
+MadCap|popupBody
+{
+	font-weight: normal;
+	border-bottom-color: #b70032;
+	border: solid 1px #b70032;
+	font-size: 10pt;
+	background-color: #ffffff;
+}
+
+MadCap|popupHead
+{
+	color: #b70032;
+	font-weight: normal;
+	text-decoration: none;
+	font-size: 8pt;
+}
+
+MadCap|relatedTopics
+{
+	mc-image: url('../vimages/vconceptlink.png');
+	color: #b70032;
+	font-size: 8pt;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+MadCap|relatedTopics:hover
+{
+	text-decoration: none;
+	font-weight: normal;
+}
+
+MadCap|shortcut
+{
+	color: #028FC3;
+	mc-image-spacing: -4px;
+	mc-image: url('../vimages/vexternallink.png');
+}
+
+MadCap|toggler
+{
+	color: #b70032;
+	font-weight: bold;
+	text-decoration: none;
+	mc-closed-image: url('../vimages/vexpandclose.png');
+	mc-open-image: url('../vimages/vexpandopen.png');
+}
+
+MadCap|toggler.TogglerWhite
+{
+	font-weight: bold;
+	text-decoration: none;
+	mc-closed-image: url('../vimages/vexpandclose.png');
+	mc-open-image: url('../vimages/vexpandopen.png');
+	color: #ffffff;
+}
+
+MadCap|topicToolbarProxy
+{
+	margin-left: 0px;
+}
+
+/***   Cross References Styles Analog To Link Styles   ***/
+
+MadCap|xref
+{
+	color: #000000;
+	mc-format: '{title}';
+	text-decoration: underline;
+}
+
+MadCap|xref:hover
+{
+	color: #b70032;
+}
+
+MadCap|xref.blue
+{
+	color: #b70032;
+}
+
+MadCap|xref.blue:hover
+{
+	color: #b70032;
+}
+
+MadCap|xref.Bold
+{
+	font-weight: bold;
+}
+
+MadCap|xref.Bold:hover
+{
+	color: #b70032;
+}
+
+MadCap|xref.ExecuteLink
+{
+	color: #028FC3;
+}
+
+MadCap|xref.ExecuteLink:hover
+{
+	color: #b70032;
+}
+
+MadCap|xref.ExternalLink
+{
+	color: #028FC3;
+}
+
+MadCap|xref.ExternalLink:hover
+{
+	color: #b70032;
+}
+
+MadCap|xref.Glossary
+{
+	background-color: #dadee1;
+}
+
+MadCap|xref.GUI
+{
+	font-weight: bold;
+}
+
+MadCap|xref.GUI:hover
+{
+	color: #b70032;
+}
+
+MadCap|xref.LinkList
+{
+	font-size: 8pt;
+	color: #b70032;
+	text-decoration: none;
+}
+
+MadCap|xref.LinkList:hover
+{
+	text-decoration: underline;
+}
+
+MadCap|xref.MenuPath
+{
+	font-size: 8pt;
+	color: #b70032;
+	text-decoration: none;
+}
+
+MadCap|xref.MenuPath:hover
+{
+	text-decoration: underline;
+}
+
+MadCap|xref.Popup
+{
+	text-decoration: underline;
+}
+
+MadCap|xref.Popup:hover
+{
+	color: #b70032;
+}
+
+MadCap|xref.red
+{
+	color: #b70032;
+}
+
+MadCap|xref.Small
+{
+	font-size: 8pt;
+}
+
+MadCap|xref.SourceCode
+{
+	font-family: 'Courier New';
+}
+
+MadCap|xref.SourceCode:hover
+{
+	color: #b70032;
+}
+
+MadCap|xref.StructurePath
+{
+	color: #ffffff;
+	font-size: 8pt;
+	text-decoration: none;
+}
+
+MadCap|xref.StructurePath:hover
+{
+	text-decoration: underline;
+}
+
+MadCap|xref.Tab
+{
+	font-size: 8pt;
+	text-decoration: none;
+	color: #909090;
+}
+
+MadCap|xref.Tab:hover
+{
+	text-decoration: underline;
+}
+
+MadCap|xref.TopOfPage
+{
+	color: #909090;
+	font-size: 8pt;
+	text-decoration: none;
+}
+
+MadCap|xref.TopOfPageWhite
+{
+	color: #ffffff;
+	font-size: 8pt;
+	text-decoration: none;
+}
+
+MadCap|xref.White
+{
+	color: #ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+MadCap|xref.White:hover
+{
+	text-decoration: underline;
+}
+
+/***   Disable Unused Styles   ***/
+
+abbr
+{
+	mc-disabled: true;
+}
+
+acronym
+{
+	mc-disabled: true;
+}
+
+address
+{
+	mc-disabled: true;
+}
+
+b
+{
+	mc-disabled: true;
+}
+
+big
+{
+	mc-disabled: true;
+}
+
+cite
+{
+	mc-disabled: true;
+}
+
+code
+{
+	mc-disabled: true;
+}
+
+del
+{
+	mc-disabled: true;
+}
+
+em
+{
+	mc-disabled: true;
+}
+
+fieldset
+{
+	mc-disabled: true;
+}
+
+h4
+{
+	mc-disabled: true;
+}
+
+h5
+{
+	mc-disabled: true;
+}
+
+h6
+{
+	mc-disabled: true;
+}
+
+html.concept
+{
+	mc-disabled: true;
+}
+
+html.reference
+{
+	mc-disabled: true;
+}
+
+html.task
+{
+	mc-disabled: true;
+}
+
+html.topic
+{
+	mc-disabled: true;
+}
+
+i
+{
+	mc-disabled: true;
+}
+
+ins
+{
+	mc-disabled: true;
+}
+
+kbd
+{
+	mc-disabled: true;
+}
+
+MadCap|helpControlMenuItem.Highlighted
+{
+	mc-disabled: true;
+}
+
+MadCap|xref.ConceptPageNumber
+{
+	mc-disabled: true;
+}
+
+MadCap|xref.IndexPageNumber
+{
+	mc-disabled: true;
+}
+
+MadCap|xref.ListOfPageNumber
+{
+	mc-disabled: true;
+}
+
+MadCap|xref.RelLinkPageNumber
+{
+	mc-disabled: true;
+}
+
+MadCap|xref.TOCPageNumber
+{
+	mc-disabled: true;
+}
+
+p.TogglerList
+{
+	margin-left: 12pt;
+	mc-disabled: true;
+}
+
+pre
+{
+	mc-disabled: true;
+}
+
+samp
+{
+	mc-disabled: true;
+}
+
+small
+{
+	mc-disabled: true;
+}
+
+span.boolean
+{
+	mc-disabled: true;
+}
+
+span.state
+{
+	mc-disabled: true;
+}
+
+strong
+{
+	mc-disabled: true;
+}
+
+tt
+{
+	mc-disabled: true;
+}
+
+var
+{
+	mc-disabled: true;
+}
+
+span.CodeComment
+{
+	color: #00a765;
+}
+

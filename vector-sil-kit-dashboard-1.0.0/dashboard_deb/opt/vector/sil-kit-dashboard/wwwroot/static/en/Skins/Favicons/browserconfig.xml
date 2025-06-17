@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square70x70logo src="http://vistrpmcwebp1.vi.vector.int/html5help/Skins/Favicons/smalltile.png" />
+            <square150x150logo src="http://vistrpmcwebp1.vi.vector.int/html5help/Skins/Favicons/favicon.png" />
+            <wide310x150logo src="http://vistrpmcwebp1.vi.vector.int/html5help/Skins/Favicons/favicon.png" />
+            <square310x310logo src="http://vistrpmcwebp1.vi.vector.int/html5help/Skins/Favicons/favicon.png" />
+            <TileColor>#B70032</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>

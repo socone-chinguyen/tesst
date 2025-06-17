@@ -1,0 +1,91 @@
+#!/bin/sh
+# postinst script for sil-kit-dashboard
+#
+# see: dh_installdeb(1)
+
+set -e
+
+# summary of how this script can be called:
+#        * <postinst> `configure' <most-recently-configured-version>
+#        * <old-postinst> `abort-upgrade' <new version>
+#        * <conflictor's-postinst> `abort-remove' `in-favour' <package>
+#          <new-version>
+#        * <postinst> `abort-remove'
+#        * <deconfigured's-postinst> `abort-deconfigure' `in-favour'
+#          <failed-install-package> <version> `removing'
+#          <conflicting-package> <version>
+# for details, see https://www.debian.org/doc/debian-policy/ or
+# the debian-policy package
+
+package_type=deb
+#
+# Register $@ unit files with systemd service.
+#
+register_services ()
+{
+  for unit in "$@"; do
+    systemctl enable --now "$unit"
+  done
+}
+
+
+#
+# Unregister $@ unit files with systemd service.
+#
+unregister_services ()
+{
+  for unit in "$@"; do
+    if file_belongs_to_single_package "$unit"; then
+      local unit_name=`basename "$unit"`
+      if systemctl list-units --full -all | grep -q "$unit_name"; then
+        systemctl disable --now "$unit_name"
+      fi
+    fi
+  done
+}
+
+file_belongs_to_single_package ()
+{
+  if [ ! -e "$1" ]; then
+    false
+  elif [ "$package_type" = rpm ]; then
+    test `rpm -q --whatprovides "$1" | wc -l` = 1
+  elif [ "$package_type" = deb ]; then
+    test `dpkg -S "$1" | wc -l` = 1
+  else
+    exit 1
+  fi
+}
+
+case "$1" in
+    configure)
+    # Create service user
+    addgroup --quiet --system sil-kit-dashboard
+    adduser --quiet --system --group --home /home/sil-kit-dashboard --disabled-password sil-kit-dashboard
+    # Create the corresponding app local data directory
+    mkdir -p /home/sil-kit-dashboard/.local/share
+    chown -R sil-kit-dashboard:sil-kit-dashboard /home/sil-kit-dashboard
+    # Move application configuration
+    mkdir -p /etc/opt/vector/sil-kit-dashboard
+    if [ ! -f /etc/opt/vector/sil-kit-dashboard/appsettings.Production.json ]
+    then
+        mv /opt/vector/sil-kit-dashboard/appsettings.Production.json /etc/opt/vector/sil-kit-dashboard/appsettings.Production.json
+    else
+        mv /opt/vector/sil-kit-dashboard/appsettings.Production.json /etc/opt/vector/sil-kit-dashboard/appsettings.Production.json.new
+    fi
+    ln -s /etc/opt/vector/sil-kit-dashboard/appsettings.Production.json /opt/vector/sil-kit-dashboard/appsettings.Production.json
+    cp /opt/vector/sil-kit-dashboard/appsettings.schema.json /etc/opt/vector/sil-kit-dashboard/appsettings.schema.json
+
+register_services '/lib/systemd/system/vector-sil-kit-dashboard.service'
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+exit 0
